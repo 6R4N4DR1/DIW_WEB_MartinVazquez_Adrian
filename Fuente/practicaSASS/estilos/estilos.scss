@@ -1,0 +1,257 @@
+@use 'variables' as var;
+@use 'sass:color';
+@use 'sass:list';
+@use 'sass:math';
+@use 'sass:map';
+
+//comentarios
+//este comentario no se compila
+/* comentario que si vampilado salvo que use el modo COMPROMIDO*/
+/*! comentario que SIEMPRE va en el CSS*/
+
+// nested rules//
+
+nav{
+    ul{
+        margin: 0;
+        padding: 0;
+        li{
+            list-style: none;
+        }
+    }
+}
+
+// & -> parent selector
+.button{
+    &.primario{
+        background-color: lightgreen;
+    }
+    &.secundario{
+        background-color: lightblue;
+    }
+}
+
+a{
+    &:hover{
+        background-color: cadetblue;
+    }
+
+    &::before{
+        content: "antes";
+        margin: 5px;
+    }
+}
+
+.caja{
+    margin: {
+        top:10px;
+        bottom: 15px;
+    }
+    padding: {
+        left: 10px;
+        right: 15px;
+    }
+}
+
+.boton, .enlace, .aviso{
+    &--primario{
+        background-color: antiquewhite;
+    }
+}
+
+//data structure//
+//variables
+
+$variable:#56acd0;
+
+// locales
+body{
+    $variable_local: red;
+    $tamaño_fuente: 16px;
+}
+
+//listas
+$tamanyo:(10px, 15px, 20px);
+
+//mapas
+$error:(
+    "leve": lightcoral,
+    "grave": red
+);
+
+//interpolacion
+//insertar dinamicamente valores
+$autor:"condemor";
+/*Web desarrollado por #{$autor}*/
+
+$color: red;
+.button-#{"#{$color}"}{
+    background-color: $color;
+}
+
+$propiedad: 'color';
+$valor: blue;
+
+.destacado{
+    background-#{$propiedad}:$valor;
+}
+
+///
+$ruta-imagen: "../img/logo.png";
+
+.fondo{
+    background-image: url('#{$ruta-imagen}');
+}
+
+//operators//
+//arithmetics
+//+, -, *, /, %
+$tamanyo_base:16px;
+
+.contenedor{
+    font-size: $tamanyo_base*3;
+    padding: math.div($tamanyo_base, 4);
+}
+
+//comparison == != < > <= >=
+$size:10px;
+.contenedor{
+    @if $size>5{
+        font-size: 10px;
+    }
+}
+
+//logical operators and or not
+$color-primario: lightblue;
+$color-secundario: lightcoral;
+$secundario: true;
+
+.contenedor{
+    background-color: if(var.$secundario and var.$color-secundario, var.$color-secundario, lightpink);
+}
+
+//user modules
+//name: _miModulo.scss
+//namespace espacio de nombres
+//@forwarding
+
+/*recomendación
+    -por propósito: _variables.scss, _funciones.scss, _mixins.scss,
+    _medios.scss, etc...
+    -por disposición: _cabecera.scss, _pie.scss, _grid.scss, etc...
+    -por propósito y disposición (recomendada):
+        -base:
+            -_reinicio.scss
+            -_tipografia.scss
+        -componentes:
+            -_header.scss
+            -_footer.scss
+            -_main.scss
+            -_carrusel.scss
+            -_disposicion.scss
+        -utilidades:
+            -_funiones.scss
+            -_medios.scss
+            -_mixins.scss
+            -_variables.scss
+            -_
+*/
+
+//built-in modules
+/*
+-math
+-color
+-string
+-map
+-list
+-meta
+-selector
+*/
+
+$color-base: #56acd0;
+$color-nuevo: color.adjust($color-base, $lightness: 20%, $saturation: -10%);
+.color-chillon{
+    background-color: $color-nuevo;
+}
+
+$color-nuevo2: color.change($color-base, $hue: 180deg, $alpha: 0.8);
+.color-saturado{
+    background-color: $color-nuevo2;
+}
+
+$variacion-color: color.scale($color-base, $lightness: -10%, $saturation: 20%);
+
+//listas
+$colores-fuertes: "red", "blue", "green";
+$colores-suaves: "lightcoral", "lightblue", "lightgreen";
+
+$numero: list.length($colores-fuertes);
+$ultimo: list.nth($colores-suaves, 1);
+$colores-suaves: list.append($colores-suaves, "lightyellow");
+$todos-los-colores: list.join($colores-suaves, $colores-fuertes);
+// list.index : posicion q ocupa cada numero
+// list.slice: te extrae una porcion
+// list.first: extrae el primero
+// list.last: extrae el ultimo
+
+//mapas
+$colores: (
+    primario: lightblue,
+    secundario: lightgreen,
+    refuerzo: red
+);
+
+.boton-primario{
+    background-color: map.get($colores, primario);
+}
+
+$colores-actualizados: map.set($colores, refuerzo, lightcoral);
+$menos-colores: map-remove($colores, refuerzo);
+$presente: map.has-key($colores, refuerzo);
+$llaves: map.keys($colores);
+$valores-de-colores: map.values($colores);
+$nuevos-colores : map.merge($colores, $colores-nuevos);
+
+
+//math
+$anchura: 500px;
+$columnas: 4;
+$anchura-columnas: math.div($anchura, $columnas);
+/*
+math.pow
+math.sqrt
+math.abs
+math.min
+math.max
+math.ceil
+math.round
+math.floor
+math.random
+math.mod
+math.clamp*/
+
+$texto: "hoy es un día estupendo para aprender SASS";
+$longitud: string.length($texto);
+$incluye: string.includes($texto, "estupendo");
+
+//estructuras de control//
+//if
+$tema: "oscuro";
+header{
+    @if $tema == "oscuro"{
+        background-color: black;
+        color: white;
+    }@else{
+        background-color: white;
+        color: black;
+    }
+}
+
+//for
+@for $i from 1 through length($colores-suaves){
+    p:nth-of-type#{$i}{
+        background-color: $colores-suaves;
+    }
+}
+
+
