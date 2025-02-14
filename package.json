@@ -1,0 +1,39 @@
+{
+  "name": "diw_web_martinvazquez_adrian",
+  "version": "1.0.0",
+  "description": "My Web Project (PHANTOM Central Hub) for DIW course, from Adrian Martin Vazquez",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch fuente/estilos/scss:fuente/estilos/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/6R4N4DR1/DIW_WEB_MartinVazquez_Adrian.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/6R4N4DR1/DIW_WEB_MartinVazquez_Adrian/issues"
+  },
+  "homepage": "https://github.com/6R4N4DR1/DIW_WEB_MartinVazquez_Adrian#readme",
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/fuente/estilos/css"
+    }
+  ],
+  "liveSassCompile.settings.autoprefix": [
+    "last 2 versions",
+    "> 1%",
+    "ie 10"
+  ],
+  "liveSassCompile.settings.showOutputWindow": true,
+  "liveSassCompile.settings.generateMap": true,
+  "liveSassCompile.settings.watchOnLaunch": true,
+  "devDependencies": {
+    "sass": "^1.85.0"
+  }
+}
