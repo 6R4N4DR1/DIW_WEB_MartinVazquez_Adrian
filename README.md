@@ -1,4 +1,4 @@
-# PHANTOM Central Hub
+# 6R4N4DR1 Web: PHANTOM Central Hub
 
 This is the web project "PHANTOM Central Hub" for the Web Interface Design (DIW) course of the Web Application Development (DAW) program. This project has been developed by me, Adrian Martin Vazquez.
 
