@@ -6,12 +6,6 @@ This is the web project "PHANTOM Central Hub" for the Web Interface Design (DIW)
 
 The "PHANTOM Central Hub" project is a centralized platform that serves as a hub for various activities and events of the PHANTOM community. The main objective is to provide an intuitive and attractive user interface for end users.
 
-## Project Structure
-
-The project is organized into the following folders and files:
-
-. ├── docs/ │ ├── gantt/ │ ├── images/ │ ├── Task1-1_Building_first_website_CMS_AdrianMartinVazquez.docx │ ├── Task1-1_Building_first_website_CMS_AdrianMartinVazquez.pdf │ ├── WebsiteTask_1_PhantomClientRequirements_AdrianMartinVazquez_v2.docx │ └── WebsiteTask_1_PhantomClientRequirements_AdrianMartinVazquez.pdf ├── fuente/ │ ├── estilos/ │ │ ├── css/ │ │ │ ├── style.css │ │ │ └── style.css.map │ │ └── scss/ │ ├── html/ │ │ └── landing.html │ ├── img/ │ │ ├── HERO_IMAGE/ │ │ ├── AboutUsIMG/ │ │ ├── ActivitySweepsIMG/ │ │ ├── CommunityIMG-CommunityVID/ │ │ ├── EventsIMG/ │ │ ├── Header-Footer/ │ │ ├── HomeIMG/ │ │ ├── Icons/ │ │ └── LandingIMG/ │ ├── js/ │ │ └── script.js │ └── index.html ├── .gitignore ├── [package.json](vscode-file://vscode-app/c:/Users/adria/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html) └── [README.md](vscode-file://vscode-app/c:/Users/adria/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html)
-
 ## Installation
 
 To install and run this project locally, follow these steps:
