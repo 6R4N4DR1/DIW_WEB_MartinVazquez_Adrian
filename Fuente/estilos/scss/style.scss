@@ -1,0 +1,19 @@
+//! CALL TO MODULES
+
+// Base
+@use 'base/fonts';
+@use 'base/all';
+
+// Components
+@use 'components/aside';
+@use 'components/main';
+@use 'components/footer';
+@use 'components/header';
+
+// Globals
+@use 'global/variables';
+@use 'global/mixins';
+@use 'global/functions';
+
+// Pages
+@use 'pages/home';
