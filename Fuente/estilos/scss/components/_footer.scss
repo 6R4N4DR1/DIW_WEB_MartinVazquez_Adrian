@@ -1,0 +1,71 @@
+//? Call to action for external elements
+@use '../global/variables' as var;
+@use '../base/fonts';
+@import '../global/mixins';
+
+footer {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var.$primary;
+    color: var.$neutral-two;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+    height: 60px;
+    z-index: 2;
+    width: 100%;
+
+    #certification-container{
+        display: flex;
+        align-items: center;
+        background-color: var.$extra;
+        padding: 4px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;   
+        
+        #certification{
+            @include image-styles(115px, auto);
+        }
+    }
+
+    #navfooter{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        a{
+            color: var.$neutral-two;
+            font-size: 0.90em;
+            font-family: var.$font-title;
+            text-decoration: none;
+            font-size: 1em;
+
+            p{
+                margin: 0;
+            }
+
+            &:hover{
+                color: var.$neutral-one;
+            }
+        }
+    }
+
+    #social-container{
+        display: flex;
+        align-items: center;
+
+        #guilded{
+            @include image-styles(40px, auto);
+        }
+
+        img{
+            @include image-styles(50px, auto);
+            margin: 0 5px;
+            transition: transform 0.3s ease;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}

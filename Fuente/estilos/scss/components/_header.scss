@@ -3,15 +3,17 @@
 @use '../base/fonts';
 @import '../global/mixins';
 
-//! Header style
 header{
-    height: 125px;
+    height: 60px;
     background-color: var.$primary;
     width: 100%;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 2;
 
     #logo-container{
         text-decoration: none;
@@ -19,79 +21,61 @@ header{
         align-items: center;
 
         #logo{
-            float:left;
-            width: 120px;
+            @include image-styles(70px, auto);
         }
     
         #logo-text{
             color: var.$neutral-two;
             font-family: var.$font-title;
-            font-size: 1.5em;
+            font-size: 0.70em;
             font-weight: bold;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
 
             .header-title{
-                margin: 0;
-                font-family: var.$font-title;
-                font-size: 1.5em;
-                color: var.$neutral-two;
-                text-transform: uppercase;
+                @include header-title-styles(1.5em);
             }
 
             .header-subtitle {
-                margin: 0;
-                font-family: var.$font-title;
-                font-size: 1.2em;
-                color: var.$neutral-two;
-                text-transform: uppercase;
+                @include header-title-styles(1.2em);
             }
 
-            .separator{
+            #header-separator{
                 width: 100%;
                 height: 2px;
                 background-color: var.$neutral-two;
+                border-color: var.$neutral-two;
+                color: var.$neutral-two;
                 margin: 5px 0;
             }
         }
     }
 
     .header-title{
-        margin: 0;
-        font-family: var.$font-title;
-        font-size: 1.5em;
-        color: var.$neutral-two;
+        @include header-title-styles(0.90em);
     }
 
     #navbar{
-        margin-left: 130px;
+        margin-left: 650px;
         ul{
             list-style: none;
             display: flex;
             gap: 30px;
 
             li{
-                display: flex;
                 align-items: center;
                 position: relative;
 
                 picture{
-                    display: flex;
                     align-items: center;
                     margin-right: 10px;
 
                     .navlogos {
-                        width: 60px;
-                        height: 60px;
+                        @include image-styles(45px, 45px);
                     }
                 }
 
                 a {
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
+                    @include navbar-link-styles;
                 }
 
                 .header-title:hover{
@@ -157,11 +141,9 @@ header{
 
     #decor-left{
         left: 0;
-        background-color: var.$neutral-two;
     }
 
     #decor-right{
         right: 0;
-        background-color: var.$neutral-two;
     }
 }

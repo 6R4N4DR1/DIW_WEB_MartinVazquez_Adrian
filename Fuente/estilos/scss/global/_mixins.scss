@@ -1,0 +1,37 @@
+@mixin header-title-styles($size) {
+    font-family: var.$font-title;
+    font-size: $size;
+    color: var.$neutral-two;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+@mixin navbar-link-styles {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var.$neutral-two;
+
+    &:hover {
+        color: var.$neutral-one;
+    }
+}
+
+@mixin image-styles($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin aside-link-styles {
+    width: 80%;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    color: var.$neutral-two;
+
+    &:hover {
+        color: var.$neutral-one;
+    }
+}
