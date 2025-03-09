@@ -1,0 +1,71 @@
+// Mixin for header title styles
+@mixin header-title-styles($size) {
+    font-family: var.$font-title; // Font family for header title
+    font-size: $size; // Font size for header title
+    color: var.$neutral-two; // Text color for header title
+    text-transform: uppercase; // Transform text to uppercase
+    margin: 0; // Remove margin
+}
+
+// Mixin for navbar link styles
+@mixin navbar-link-styles {
+    text-decoration: none; // Remove text decoration
+    display: flex; // Use flexbox layout
+    align-items: center; // Center items vertically
+    color: var.$neutral-two; // Text color for navbar link
+
+    &:hover {
+        color: var.$neutral-one; // Change color on hover
+    }
+}
+
+// Mixin for image styles with specific width and height
+@mixin image-styles($width, $height) {
+    width: $width; // Set width
+    height: $height; // Set height
+}
+
+// Mixin for button styles with background and text color
+@mixin button-styles($bg-color, $text-color) {
+    background-color: $bg-color; // Background color for button
+    color: $text-color; // Text color for button
+    border: none; // Remove border
+    cursor: pointer; // Pointer cursor
+    font-family: var.$font-base; // Font family for button
+    font-size: 0.80em; // Font size for button
+    transition: 0.3s; // Smooth transition
+}
+
+// Mixin for flex container with customizable properties
+@mixin flex-container($justify: flex-start, $align: center, $direction: row, $gap: 0) {
+    display: flex; // Use flexbox layout
+    justify-content: $justify; // Justify content
+    align-items: $align; // Align items
+    flex-direction: $direction; // Flex direction
+    gap: $gap; // Gap between items
+}
+
+// Mixin for link styles with color and hover color
+@mixin link-styles($color, $hover-color) {
+    color: $color; // Text color for link
+    text-decoration: none; // Remove text decoration
+    transition: color 0.3s ease; // Smooth transition for color
+
+    &:hover {
+        color: $hover-color; // Change color on hover
+    }
+}
+
+// Mixin for text styles with font family, size, and color
+@mixin text-styles($font-family, $font-size, $color) {
+    font-family: $font-family; // Font family for text
+    font-size: $font-size; // Font size for text
+    color: $color; // Text color for text
+}
+
+// Mixin to reset styles for padding, margin, and box-sizing
+@mixin reset-styles {
+    padding: 0; // Remove padding
+    margin: 0; // Remove margin
+    box-sizing: border-box; // Set box-sizing to border-box
+}

@@ -1,0 +1,70 @@
+@use '../global/variables' as var; // Importing variables with alias 'var'
+@use '../base/fonts'; // Importing font styles
+@use '../global/functions'; // Importing global functions
+@import '../global/mixins'; // Importing mixins for reuse
+
+.tutorial {
+    text-align: center; // Center align text
+    padding: 0 10%; // Add padding to center content without using margin
+    padding-bottom: 30px;
+
+    h1 {
+        font-size: 2.5em; // Make STEP 1 larger
+        color: var.$primary; // Use primary color
+        font-family: var.$font-title; // Use title font
+        padding-bottom: 10px; // Add padding at the bottom
+    }
+
+    h2 {
+        font-family: var.$font-title; // Use title font
+        padding-bottom: 10px; // Add padding at the bottom
+    }
+
+    p.explanation {
+        font-family: var.$font-base; // Use base font
+        padding-bottom: 20px; // Add padding at the bottom
+    }
+
+    .videomadeby {
+        iframe {
+            width: 70%; // Make video larger
+            height: 450px; // Set height for the video
+        }
+
+        .made, .date {
+            text-align: right; // Align text to the right
+            font-family: var.$font-base; // Use base font
+            padding-right: 15%; // Add padding to the right
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .tutorial {
+        .videomadeby {
+            iframe {
+                width: 100%; // Make video larger
+                height: 325px; // Set height for the video
+            }
+
+            .made, .date {
+                padding-right: 0; // Add padding to the right
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .tutorial {
+        .videomadeby {
+            iframe {
+                width: 100%; // Make video larger
+                height: 175px; // Set height for the video
+            }
+
+            .made, .date {
+                padding-right: 0; // Add padding to the right
+            }
+        }
+    }
+}

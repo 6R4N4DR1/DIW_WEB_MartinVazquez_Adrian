@@ -1,0 +1,160 @@
+@use '../global/variables' as var; // Importing variables with alias 'var'
+@use '../base/fonts'; // Importing font styles
+@use '../global/functions'; // Importing global functions
+@import '../global/mixins'; // Importing mixins for reuse
+
+footer {
+    // Applying flex container mixin with space-between and center alignment
+    @include flex-container(space-between, center);
+    position: relative; // Relative positioning
+    background-color: var.$primary; // Background color
+    color: var.$neutral-two; // Text color
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2); // Box shadow for footer
+    height: auto; // Auto height
+    z-index: 4; // Ensure it is above other elements
+    margin-top: auto; // Margin at the top
+    width: 100%; // Full width
+
+    #certification-container {
+        // Applying flex container mixin with center alignment
+        @include flex-container(center, center);
+        background-color: var.$extra; // Background color
+        padding: 4px; // Padding
+        border-top-right-radius: 20px; // Rounded top-right corner
+        border-bottom-right-radius: 20px; // Rounded bottom-right corner
+
+        #certification {
+            // Applying image styles mixin with specific dimensions
+            @include image-styles(115px, auto); // Image dimensions
+        }
+    }
+
+    #navfooter {
+        display: flex; // Flexbox layout
+        justify-content: center; // Center content horizontally
+        align-items: center; // Center content vertically
+        gap: 30px; // Gap between items
+
+        a {
+            // Applying link styles mixin with specific colors
+            @include link-styles(var.$neutral-two, var.$neutral-one);
+            font-family: var.$font-title; // Font family
+            font-size: 1.2em; // Font size
+
+            p {
+                margin: 0; // Remove margin
+            }
+        }
+    }
+
+    #social-container {
+        display: flex; // Flexbox layout
+        justify-content: center; // Center content horizontally
+        align-items: center; // Center content vertically
+
+        #guilded {
+            // Applying image styles mixin with specific dimensions
+            @include image-styles(40px, auto); // Image dimensions
+        }
+
+        img {
+            // Applying image styles mixin with specific dimensions
+            @include image-styles(50px, auto); // Image dimensions
+            margin: 0 5px; // Margin around images
+            transition: transform 0.3s ease; // Smooth transition for transform
+
+            &:hover {
+                transform: scale(1.1); // Scale up on hover
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        flex-direction: column; // Stack items vertically
+        height: auto; // Auto height
+
+        #certification-container {
+            width: 100%; // Full width
+            padding: 4px; // Padding
+            margin-bottom: 20px; // Margin at the bottom
+            border-top-right-radius: 0; // Remove top-right corner radius
+            border-bottom-right-radius: 0; // Remove bottom-right corner radius
+
+            #certification {
+                // Applying image styles mixin with specific dimensions
+                @include image-styles(150px, auto); // Image dimensions
+            }
+        }
+
+        #navfooter {
+            a {
+                // Applying link styles mixin with specific colors
+                @include link-styles(var.$neutral-two, var.$neutral-one);
+                font-size: 1em; // Font size
+                font-family: var.$font-title; // Font family
+
+                p {
+                    margin: 0; // Remove margin
+                }
+            }
+        }
+
+        #social-container {
+            margin-top: 20px; // Margin at the top
+            #guilded {
+                // Applying image styles mixin with specific dimensions
+                @include image-styles(35px, auto); // Image dimensions
+            }
+
+            img {
+                // Applying image styles mixin with specific dimensions
+                @include image-styles(45px, auto); // Image dimensions
+                transition: transform 0.3s ease; // Smooth transition for transform
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    footer {
+        height: auto; // Auto height
+        width: 100%; // Full width
+
+        #certification-container {
+            padding: 4px; // Padding
+
+            #certification {
+                // Applying image styles mixin with specific dimensions
+                @include image-styles(150px, auto); // Image dimensions
+            }
+        }
+
+        #navfooter {
+            a {
+                // Applying link styles mixin with specific colors
+                @include link-styles(var.$neutral-two, var.$neutral-one);
+                font-size: 1em; // Font size
+                font-family: var.$font-title; // Font family
+
+                p {
+                    margin: 0; // Remove margin
+                }
+            }
+        }
+
+        #social-container {
+            #guilded {
+                // Applying image styles mixin with specific dimensions
+                @include image-styles(35px, auto); // Image dimensions
+            }
+
+            img {
+                // Applying image styles mixin with specific dimensions
+                @include image-styles(45px, auto); // Image dimensions
+                transition: transform 0.3s ease; // Smooth transition for transform
+            }
+        }
+    }
+}

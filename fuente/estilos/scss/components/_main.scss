@@ -1,0 +1,115 @@
+@use '../global/variables' as var; // Importing variables with alias 'var'
+@use '../base/fonts'; // Importing font styles
+@use '../global/functions'; // Importing global functions
+@import '../global/mixins'; // Importing mixins for reuse
+
+main {
+    display: flex; // Use flexbox layout
+    flex-direction: column; // Arrange children in a column direction
+    margin-top: 60px; // Margin at the top
+    flex: 1; // Take up remaining space
+    align-items: center; // Center items horizontally
+    text-align: center; // Center text
+    font-family: var.$font-base; // Base font family
+    z-index: 1; // Ensure it is above other elements
+
+    .welcome-title {
+        margin-top: 80px; // Margin at the top
+        position: relative; // Relative positioning
+        // Applying text styles mixin with specific font, size, and color
+        @include text-styles(var.$font-base, 3rem, var.$neutral-two);
+    }
+
+    #welcome-separator {
+        width: 650px; // Width of the separator
+        height: 2px; // Height of the separator
+        background-color: var.$secondary-dark; // Background color
+        border: none; // No border
+        margin: 10px auto 20px; // Margin
+    }
+
+    .welcome-subtitle {
+        margin-bottom: 20px; // Margin at the bottom
+        // Applying text styles mixin with specific font, size, and color
+        @include text-styles(var.$font-base, 2rem, var.$neutral-two);
+    }
+
+    #LandingCTA {
+        margin-top: 20px; // Margin at the top
+        ul {
+            // Applying flex container mixin with center alignment and row direction
+            @include flex-container(center, center, row);
+            list-style: none; // Remove list style
+            padding: 0; // Remove padding
+
+            li {
+                margin: 0 10px; // Margin
+
+                .btn-gray {
+                    background-color: var.$neutral-one; // Background color
+                    color: var.$contrast; // Text color
+                    padding: 15px 30px; // Padding
+                    border-radius: 8px; // Rounded corners
+                    text-decoration: none; // Remove text decoration
+                    font-size: 1.2rem; // Font size
+                    font-weight: bold; // Font weight
+                    transition: background-color 0.3s ease, transform 0.3s ease; // Smooth transitions
+
+                    &:hover {
+                        background-color: darken(var.$neutral-two, 10%); // Darken background color on hover
+                        transform: scale(1.05); // Scale up on hover
+                    }
+                }
+            }
+            #or {
+                // Applying text styles mixin with specific font, size, and color
+                @include text-styles(var.$font-base, 1.2rem, var.$neutral-two);
+                margin: 0 10px; // Margin
+            }
+        }
+    }
+
+    #LandingPRASInfo {
+        margin-top: 100px; // Margin at the top
+        padding: 0 20px; // Padding
+        text-align: center; // Center text
+
+        .pras-title {
+            // Applying text styles mixin with specific font, size, and color
+            @include text-styles(var.$font-title, 5rem, var.$neutral-two);
+        }
+
+        img#PRAS {
+            margin-right: 29px; // Margin on the right
+            width: 100%; // Full width
+            max-width: 150px; // Maximum width
+            height: auto; // Auto height
+            margin-bottom: -30px; // Margin at the bottom
+        }
+
+        p {
+            margin: 0 auto; // Center horizontally
+            // Applying text styles mixin with specific font, size, and color
+            @include text-styles(var.$font-base, 1.2rem, var.$neutral-two);
+            max-width: 1000px; // Maximum width
+            margin-bottom: 20px; // Margin at the bottom
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        margin-top: 80px; // Margin at the top
+        margin-bottom: 30px; // Margin at the bottom
+        #welcome-separator {
+            width: 100%; // Full width
+        }
+        #LandingCTA {
+            margin-top: 20px; // Margin at the top
+            ul {
+                // Applying flex container mixin with center alignment and column direction
+                @include flex-container(center, center, column, 35px);
+            }
+        }
+    }   
+}

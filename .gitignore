@@ -1,0 +1,8 @@
+# No subir node_modules al repositorio
+node_modules
+
+# No subir package_lock.json al repositorio
+package-lock.json
+
+# No subir produccion
+fuente/produccion

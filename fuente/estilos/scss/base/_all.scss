@@ -1,0 +1,44 @@
+//! GENERAL STYLES
+
+// Importing variables, functions and fonts from other SCSS files
+@use '../global/variables' as var; // Importing variables with alias 'var'
+@use '../base/fonts'; // Importing font styles
+@use '../global/functions'; // Importing global functions
+
+// Importing mixins
+@import '../global/mixins'; // Importing mixins for reuse
+
+// Applying reset styles to all elements
+* {
+    @include reset-styles; // Including reset styles mixin to remove default browser styles
+}
+
+// Setting height and flex properties for html and body
+html, body {
+    height: 100%; // Ensuring html and body take full height of the viewport
+    margin: 0; // Removing margin
+    padding: 0; // Removing padding
+    display: flex; // Setting display to flex for flexible box layout
+    flex-direction: column; // Arranging children in a column direction
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; // Ensure body takes at least the full viewport height
+}
+
+.LandingHeroImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.LandingHeroImage img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

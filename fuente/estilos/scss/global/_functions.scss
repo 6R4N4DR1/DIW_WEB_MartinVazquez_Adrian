@@ -1,0 +1,9 @@
+/// Convert pixels to rem units
+/// @param {Number} $px - The pixel value to convert
+/// @param {Number} $base - The base font size (default is 16px)
+/// @return {Number} - The value in rem units
+
+@function px-to-rem($px, $base: 16px) {
+    // Divide the pixel value by the base font size and multiply by 1rem to get the rem value
+    @return $px / $base * 1rem;
+}

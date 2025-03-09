@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="../estilos/css/style.css">
+    
+    <!-- Favicon for the website -->
+    <link rel="icon" type="image/x-icon" href="../img/Icons/Favicon/favicon.ico">
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/180c35a309.js" crossorigin="anonymous"></script>
+    
+    <!-- External JavaScript file -->
+    <script src="../js/script.js" defer></script>
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    
+    <!-- Title of the webpage -->
+    <title>PHANTOM Central Hub</title>
+</head>
+<body>
+    <header id="header">
+        <!-- Logo and text in the header -->
+        <a href="../index.html" id="logo-container">
+            <picture>
+                <!-- Responsive images for different screen sizes -->
+                <source type="image/webp" srcset="../img/Header-Footer/LOGOS/WEBP/768px~1200px/LOGO1024px.webp 1024w, ../img/Header-Footer/LOGOS/PNG/480px~768px/LOGO512px.png 512w"
+                sizes="(max-width: 480px) 40vw, 
+                (max-width: 768px) 50vw, 
+                (max-width: 1200px) 33vw, 
+                (max-width: 1920px) 25vw, 
+                20vw">
+                <source type="image/avif" srcset="../img/Header-Footer/LOGOS/AVIF/768px~1200px/LOGO1024px.avif 1024w, ../img/Header-Footer/LOGOS/PNG/480px~768px/LOGO512px.png 512w"
+                sizes="(max-width: 480px) 40vw, 
+                (max-width: 768px) 50vw, 
+                (max-width: 1200px) 33vw, 
+                (max-width: 1920px) 25vw, 
+                20vw">
+                <img src="../img/Header-Footer/LOGOS/PNG/768px~1200px/LOGO1024px.png" alt="PHANTOM Central Hub logo" id="logo"
+                sizes="(max-width: 480px) 40vw, 
+                (max-width: 768px) 50vw, 
+                (max-width: 1200px) 33vw, 
+                (max-width: 1920px) 25vw, 
+                20vw">
+            </picture>
+            <section id="logo-text">
+                <h3 class="header-title">PHANTOM</h3>
+                <hr id="header-separator">
+                <h4 class="header-subtitle">CENTRAL HUB</h4>
+            </section>
+        </a>
+        
+        <!-- Navigation bar -->
+        <nav id="navbar">
+            <ul>
+                <li>
+                    <a href="home.html">
+                        <picture>
+                            <!-- Responsive images for different screen sizes -->
+                            <source type="image/webp" srcset="../img/Header-Footer/NAV/WEBP/768px~1200px/home1024px.webp 1024w, ../img/Header-Footer/NAV/WEBP/480px~768px/home512px.webp 512w"
+                            sizes="(max-width: 480px) 40vw, 
+                            (max-width: 768px) 50vw, 
+                            (max-width: 1200px) 33vw, 
+                            (max-width: 1920px) 25vw, 
+                            20vw">      
+                            <source type="image/avif" srcset="../img/Header-Footer/NAV/AVIF/768px~1200px/home1024px.avif 1024w, ../img/Header-Footer/NAV/AVIF/480px~768px/home512px.avif 512w"
+                            sizes="(max-width: 480px) 40vw, 
+                            (max-width: 768px) 50vw, 
+                            (max-width: 1200px) 33vw, 
+                            (max-width: 1920px) 25vw, 
+                            20vw">
+                            <img src="../img/Header-Footer/NAV/PNG/768px~1200px/home1024px.png" alt="Home icon" class="navlogos"
+                            sizes="(max-width: 480px) 40vw, 
+                            (max-width: 768px) 50vw, 
+                            (max-width: 1200px) 33vw, 
+                            (max-width: 1920px) 25vw, 
+                            20vw">
+                        </picture>
+                        <h3 class="header-title">HOME</h3>
+                    </a>
+                </li>
+                <li>
+                    <details>
+                        <summary>
+                            <picture>
+                                <!-- Responsive images for different screen sizes -->
+                                <source type="image/webp" srcset="../img/Header-Footer/NAV/WEBP/768px~1200px/group-discussion1024px.webp 1024w, ../img/Header-Footer/NAV/WEBP/480px~768px/group-discussion512px.webp 512w"
+                                sizes="(max-width: 480px) 40vw, 
+                                (max-width: 768px) 50vw, 
+                                (max-width: 1200px) 33vw, 
+                                (max-width: 1920px) 25vw, 
+                                20vw">
+                                <source type="image/avif" srcset="../img/Header-Footer/NAV/AVIF/768px~1200px/group-discussion1024px.avif 1024w, ../img/Header-Footer/NAV/AVIF/480px~768px/group-discussion512px.avif 512w"
+                                sizes="(max-width: 480px) 40vw, 
+                                (max-width: 768px) 50vw, 
+                                (max-width: 1200px) 33vw, 
+                                (max-width: 1920px) 25vw, 
+                                20vw">
+                                <img src="../img/Header-Footer/NAV/PNG/768px~1200px/group-discussion1024px.png" alt="Events icon" class="navlogos"
+                                sizes="(max-width: 480px) 40vw, 
+                                (max-width: 768px) 50vw, 
+                                (max-width: 1200px) 33vw, 
+                                (max-width: 1920px) 25vw, 
+                                20vw">
+                            </picture>
+                            <h3 class="header-title">EVENTS</h3>
+                        </summary>
+                        <ul class="navdrop">
+                            <li>
+                                <a href="active.html">ACTIVE</a>
+                            </li>
+                            <li>
+                                <a href="scheduled.html">SCHEDULED</a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>
+                            <picture>
+                                <!-- Responsive images for different screen sizes -->
+                                <source type="image/webp" srcset="../img/Header-Footer/NAV/WEBP/768px~1200px/megaphone1024px.webp 1024w, ../img/Header-Footer/NAV/WEBP/480px~768px/megaphone512px.webp 512w"
+                                sizes="(max-width: 480px) 40vw, 
+                                (max-width: 768px) 50vw, 
+                                (max-width: 1200px) 33vw, 
+                                (max-width: 1920px) 25vw, 
+                                20vw">
+                                <source type="image/avif" srcset="../img/Header-Footer/NAV/AVIF/768px~1200px/megaphone1024px.avif 1024w, ../img/Header-Footer/NAV/AVIF/480px~768px/megaphone512px.avif 512w"
+                                sizes="(max-width: 480px) 40vw, 
+                                (max-width: 768px) 50vw, 
+                                (max-width: 1200px) 33vw, 
+                                (max-width: 1920px) 25vw, 
+                                20vw">
+                                <img src="../img/Header-Footer/NAV/PNG/768px~1200px/megaphone1024px.png" alt="Community icon" class="navlogos"
+                                sizes="(max-width: 480px) 40vw, 
+                                (max-width: 768px) 50vw, 
+                                (max-width: 1200px) 33vw, 
+                                (max-width: 1920px) 25vw, 
+                                20vw">
+                            </picture>
+                            <h3 class="header-title">COMMUNITY</h3>
+                        </summary>
+                        <ul class="navdrop">
+                            <li>
+                                <a href="polls.html">POLLS</a>
+                            </li>
+                            <li>
+                                <a href="tutorials.html">TUTORIALS</a>
+                            </li>
+                            <li>
+                                <a href="developers.html">DEVELOPERS</a>
+                            </li>
+                            <li>
+                                <a href="users.html">USERS</a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <a href="activitysweeps.html">
+                        <picture>
+                            <!-- Responsive images for different screen sizes -->
+                            <source type="image/webp" srcset="../img/Header-Footer/NAV/WEBP/768px~1200px/trophy1024px.webp 1024w, ../img/Header-Footer/NAV/WEBP/480px~768px/trophy512px.webp 512w"
+                            sizes="(max-width: 480px) 40vw, 
+                            (max-width: 768px) 50vw, 
+                            (max-width: 1200px) 33vw, 
+                            (max-width: 1920px) 25vw, 
+                            20vw">
+                            <source type="image/avif" srcset="../img/Header-Footer/NAV/AVIF/768px~1200px/trophy1024px.avif 1024w, ../img/Header-Footer/NAV/AVIF/480px~768px/trophy512px.avif 512w"
+                            sizes="(max-width: 480px) 40vw, 
+                            (max-width: 768px) 50vw, 
+                            (max-width: 1200px) 33vw, 
+                            (max-width: 1920px) 25vw, 
+                            20vw">
+                            <img src="../img/Header-Footer/NAV/PNG/768px~1200px/trophy1024px.png" alt="Activity Sweeps icon" class="navlogos"
+                            sizes="(max-width: 480px) 40vw, 
+                            (max-width: 768px) 50vw, 
+                            (max-width: 1200px) 33vw, 
+                            (max-width: 1920px) 25vw, 
+                            20vw">
+                        </picture>
+                        <h3 class="header-title">A.S.</h3>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Button to toggle the aside menu -->
+    <button id="toggle-aside">MENU</button>
+    
+    <!-- Sidebar with user profile and links -->
+    <aside id="sidebar-two">
+        <section id="aside-left">
+            <a href="users.html" id="aside-username">
+                <picture>
+                    <!-- Responsive images for different screen sizes -->
+                    <source type="image/webp" srcset="../img/Header-Footer/DROPDOWN/WEBP/768px~1200px/PFP1024px.webp 1024w, ../img/Header-Footer/DROPDOWN/WEBP/480px~768px/PFP512px.webp 512w"
+                    sizes="(max-width: 480px) 40vw, 
+                    (max-width: 768px) 50vw, 
+                    (max-width: 1200px) 33vw, 
+                    (max-width: 1920px) 25vw, 
+                    20vw">
+                    <source type="image/avif" srcset="../img/Header-Footer/DROPDOWN/AVIF/768px~1200px/PFP1024px.avif 1024w, ../img/Header-Footer/DROPDOWN/AVIF/480px~768px/PFP512px.avif 512w"
+                    sizes="(max-width: 480px) 40vw, 
+                    (max-width: 768px) 50vw, 
+                    (max-width: 1200px) 33vw, 
+                    (max-width: 1920px) 25vw, 
+                    20vw">
+                    <img src="../img/Header-Footer/DROPDOWN/PNG/768px~1200px/PFP1024px.png" alt="Profile picture on aside" id="pfpaside"
+                    sizes="(max-width: 480px) 40vw, 
+                    (max-width: 768px) 50vw, 
+                    (max-width: 1200px) 33vw, 
+                    (max-width: 1920px) 25vw, 
+                    20vw">
+                </picture>
+                <h1 class="aside-username-text">Username</h1>
+            </a>
+            <hr id="vertical-separator">
+        </section>
+        <section id="aside-content">
+            <ul>
+                <li>
+                    <a href="users.html">About Me</a>
+                </li>
+                <li>
+                    <a href="users.html">Edit My Profile</a>
+                </li>
+                <li>
+                    <a href="users.html" id="PRASlink">P.R.A.S.</a>
+                </li>
+            </ul>
+        </section>
+    </aside>
+    
+    <!-- Main content of the page -->
+    <main id="main">
+        <!-- Hero image and title section -->
+        <article class="HeroImageTitle">
+            <picture id="heroimage">
+                <!-- Responsive images for different screen sizes -->
+                <source type="image/webp" srcset="../img/HERO_IMAGE/WEBP/768px~1200px/HeroImage1024px.webp 1024w, ../img/HERO_IMAGE/WEBP/480px~768px/HeroImage512px.webp 512w"
+                sizes="(max-width: 480px) 40vw, 
+                (max-width: 768px) 50vw, 
+                (max-width: 1200px) 33vw, 
+                (max-width: 1920px) 25vw, 
+                20vw">
+                <source type="image/avif" srcset="../img/HERO_IMAGE/AVIF/768px~1200px/HeroImage1024px.avif 1024w, ../img/HERO_IMAGE/AVIF/480px~768px/HeroImage512px.avif 512w"
+                sizes="(max-width: 480px) 40vw, 
+                (max-width: 768px) 50vw, 
+                (max-width: 1200px) 33vw, 
+                (max-width: 1920px) 25vw, 
+                20vw">
+                <img src="../img/HERO_IMAGE/JPG/768px~1200px/HeroImage1024px.jpg" alt="Announcements background"
+                sizes="(max-width: 480px) 40vw, 
+                (max-width: 768px) 50vw, 
+                (max-width: 1200px) 33vw, 
+                (max-width: 1920px) 25vw, 
+                20vw">
+            </picture>
+            <section class="pageTitle">
+                <h1>ABOUT US</h1>
+            </section>
+        </article>
+        
+        <article class="aboutus">
+            <section class="ourstory">
+                <h1>OUR STORY</h1>
+                <p>PHANTOM is, at their best, a covert task force 
+                that undergoes important missions in order to 
+                maintain the safety of City-17. They specialize 
+                in reconnaissance, infiltration, and 
+                assassination. Whatever they do, they do it fast
+                and unseen.
+                PHANTOM doesn't charge into battle or sit in 
+                the backlines, lining up the perfect shot. They 
+                slip right through their foes, undetected. As a 
+                PHANTOM, you're expected to be able to hunt 
+                down contraband, infiltrate highly-reinforced
+                anti-civil hideouts, relay confidential 
+                information, and assassinate dangerous targets 
+                all with professionalism and discipline.</p>
+            </section>
+            <section class="trailer">
+                <h1>TRAILER</h1>
+                <iframe src="https://www.youtube.com/embed/_VbJxE1aMnU?si=gfjYJLmDTXh-o4MX" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <h1>MAIN OWNERS</h1>
+            </section>
+            <section class="owners">
+                <section class="owner1">
+                    <picture>
+                        <!-- Responsive images for different screen sizes -->
+                        <source type="image/webp" srcset="../img/AboutUsIMG/WEBP/768px~1200px/Omega1024px.webp 1024w, ../img/AboutUsIMG/WEBP/480px~768px/Omega512px.webp 512w"
+                        sizes="(max-width: 480px) 40vw, 
+                        (max-width: 768px) 50vw, 
+                        (max-width: 1200px) 33vw, 
+                        (max-width: 1920px) 25vw, 
+                        20vw">
+                        <source type="image/avif" srcset="../img/AboutUsIMG/AVIF/768px~1200px/Omega1024px.avif 1024w, ../img/AboutUsIMG/AVIF/480px~768px/Omega512px.avif 512w"
+                        sizes="(max-width: 480px) 40vw, 
+                        (max-width: 768px) 50vw, 
+                        (max-width: 1200px) 33vw, 
+                        (max-width: 1920px) 25vw, 
+                        20vw">
+                        <img src="../img/AboutUsIMG/PNG/768px~1200px/Omega1024px.png" alt="Owner 1" id="owner1"
+                        sizes="(max-width: 480px) 40vw, 
+                        (max-width: 768px) 50vw, 
+                        (max-width: 1200px) 33vw, 
+                        (max-width: 1920px) 25vw, 
+                        20vw">
+                    </picture>
+                    <h2>Omega</h2>
+                </section>
+                <section class="owner2">
+                    <picture>
+                        <!-- Responsive images for different screen sizes -->
+                        <source type="image/webp" srcset="../img/AboutUsIMG/WEBP/768px~1200px/Lizard1024px.webp 1024w, ../img/AboutUsIMG/WEBP/480px~768px/Lizard512px.webp 512w"
+                        sizes="(max-width: 480px) 40vw, 
+                        (max-width: 768px) 50vw, 
+                        (max-width: 1200px) 33vw, 
+                        (max-width: 1920px) 25vw, 
+                        20vw">
+                        <source type="image/avif" srcset="../img/AboutUsIMG/AVIF/768px~1200px/Lizard1024px.avif 1024w, ../img/AboutUsIMG/AVIF/480px~768px/Lizard512px.avif 512w"
+                        sizes="(max-width: 480px) 40vw, 
+                        (max-width: 768px) 50vw, 
+                        (max-width: 1200px) 33vw, 
+                        (max-width: 1920px) 25vw, 
+                        20vw">
+                        <img src="../img/AboutUsIMG/PNG/768px~1200px/Lizard1024px.png" alt="Owner 2" id="owner2"
+                        sizes="(max-width: 480px) 40vw, 
+                        (max-width: 768px) 50vw, 
+                        (max-width: 1200px) 33vw, 
+                        (max-width: 1920px) 25vw, 
+                        20vw">
+                    </picture>
+                    <h2>Lizard</h2>
+                </section>
+                <section class="owner3">
+                    <picture>
+                        <!-- Responsive images for different screen sizes -->
+                        <source type="image/webp" srcset="../img/AboutUsIMG/WEBP/768px~1200px/Adab1024px.webp 1024w, ../img/AboutUsIMG/WEBP/480px~768px/Adab512px.webp 512w"
+                        sizes="(max-width: 480px) 40vw, 
+                        (max-width: 768px) 50vw, 
+                        (max-width: 1200px) 33vw, 
+                        (max-width: 1920px) 25vw, 
+                        20vw">
+                        <source type="image/avif" srcset="../img/AboutUsIMG/AVIF/768px~1200px/Adab1024px.avif 1024w, ../img/AboutUsIMG/AVIF/480px~768px/Adab512px.avif 512w"
+                        sizes="(max-width: 480px) 40vw, 
+                        (max-width: 768px) 50vw, 
+                        (max-width: 1200px) 33vw, 
+                        (max-width: 1920px) 25vw, 
+                        20vw">
+                        <img src="../img/AboutUsIMG/PNG/768px~1200px/Adab1024px.png" alt="Owner 3" id="owner3"
+                        sizes="(max-width: 480px) 40vw, 
+                        (max-width: 768px) 50vw, 
+                        (max-width: 1200px) 33vw, 
+                        (max-width: 1920px) 25vw, 
+                        20vw">
+                    </picture>
+                    <h2>Adab</h2>
+                </section>
+                <section class="owner4">
+                    <picture>
+                        <!-- Responsive images for different screen sizes -->
+                        <source type="image/webp" srcset="../img/AboutUsIMG/WEBP/768px~1200px/iamdead1024px.webp 1024w, ../img/AboutUsIMG/WEBP/480px~768px/iamdead512px.webp 512w"
+                        sizes="(max-width: 480px) 40vw, 
+                        (max-width: 768px) 50vw, 
+                        (max-width: 1200px) 33vw, 
+                        (max-width: 1920px) 25vw, 
+                        20vw">
+                        <source type="image/avif" srcset="../img/AboutUsIMG/AVIF/768px~1200px/iamdead1024px.avif 1024w, ../img/AboutUsIMG/AVIF/480px~768px/iamdead512px.avif 512w"
+                        sizes="(max-width: 480px) 40vw, 
+                        (max-width: 768px) 50vw, 
+                        (max-width: 1200px) 33vw, 
+                        (max-width: 1920px) 25vw, 
+                        20vw">
+                        <img src="../img/AboutUsIMG/PNG/768px~1200px/iamdead1024px.png" alt="Owner 4" id="owner4"
+                        sizes="(max-width: 480px) 40vw, 
+                        (max-width: 768px) 50vw, 
+                        (max-width: 1200px) 33vw, 
+                        (max-width: 1920px) 25vw, 
+                        20vw">
+                    </picture>
+                    <h2>IamdeadaedmaI</h2>
+                </section>
+                <section class="owner5">
+                    <picture>
+                        <!-- Responsive images for different screen sizes -->
+                        <source type="image/webp" srcset="../img/AboutUsIMG/WEBP/768px~1200px/tepigater1024px.webp 1024w, ../img/AboutUsIMG/WEBP/480px~768px/tepigater512px.webp 512w"
+                        sizes="(max-width: 480px) 40vw, 
+                        (max-width: 768px) 50vw, 
+                        (max-width: 1200px) 33vw, 
+                        (max-width: 1920px) 25vw, 
+                        20vw">
+                        <source type="image/avif" srcset="../img/AboutUsIMG/AVIF/768px~1200px/tepigater1024px.avif 1024w, ../img/AboutUsIMG/AVIF/480px~768px/tepigater512px.avif 512w"
+                        sizes="(max-width: 480px) 40vw, 
+                        (max-width: 768px) 50vw, 
+                        (max-width: 1200px) 33vw, 
+                        (max-width: 1920px) 25vw, 
+                        20vw">
+                        <img src="../img/AboutUsIMG/PNG/768px~1200px/tepigater1024px.png" alt="Owner 5" id="owner5"
+                        sizes="(max-width: 480px) 40vw, 
+                        (max-width: 768px) 50vw, 
+                        (max-width: 1200px) 33vw, 
+                        (max-width: 1920px) 25vw, 
+                        20vw">
+                    </picture>
+                    <h2>tepigater</h2>
+                </section>
+            </section>
+            <section class="map">
+                <h1>MAP</h1>
+                <p>There's no funcionality applied yet. (Javascript needed)</p>
+            </section>
+            <section class="discord">
+                <h1>DISCORD INTEGRATION</h1>
+                <p>There's no funcionality applied yet. (API and Javascript needed)</p>
+            </section>
+        </article>
+    </main>
+    
+    <!-- Footer section -->
+    <footer id="footer">
+        <section id="certification-container">
+            <!-- Responsive images for different screen sizes (Certification logo) -->
+            <picture>
+                <source type="image/webp" srcset="../img/Header-Footer/LOGOS/WEBP/768px~1200px/TheRobineCertificate1024px.webp 1024w, ../img/Header-Footer/LOGOS/WEBP/480px~768px/TheRobineCertificate512px.webp 512w"
+                sizes="(max-width: 480px) 40vw, 
+                (max-width: 768px) 50vw, 
+                (max-width: 1200px) 33vw, 
+                (max-width: 1920px) 25vw, 
+                20vw">
+                <source type="image/avif" srcset="../img/Header-Footer/LOGOS/AVIF/768px~1200px/TheRobineCertificate1024px.avif 1024w, ../img/Header-Footer/LOGOS/AVIF/480px~768px/TheRobineCertificate512px.avif 512w"
+                sizes="(max-width: 480px) 40vw, 
+                (max-width: 768px) 50vw, 
+                (max-width: 1200px) 33vw, 
+                (max-width: 1920px) 25vw, 
+                20vw">
+                <img src="../img/Header-Footer/LOGOS/PNG/768px~1200px/TheRobineCertificate1024px.png" alt="Certification logo" id="certification"
+                sizes="(max-width: 480px) 40vw, 
+                (max-width: 768px) 50vw, 
+                (max-width: 1200px) 33vw, 
+                (max-width: 1920px) 25vw, 
+                20vw">
+            </picture>
+        </section>
+        <!-- Navigation bar for more pages -->
+        <nav id="navfooter">
+            <a href="aboutus.html" id="about">
+                <p>ABOUT US</p>
+            </a>
+            <a href="https://docs.google.com/document/d/1NgJfQ0hf8yU_roTLZmAxqYtQPy_CvCqVIGaHLYhlsJ0/edit?tab=t.0#heading=h.rkhhyqrck0s4" target="_blank" rel="noopener" id="info">
+                <p>INFORMATION</p>
+            </a>
+        </nav>
+        <section id="social-container">
+            <!-- Social links -->
+            <a href="https://discord.gg/qeb75vsJgs" target="_blank" rel="noopener">
+                <picture>
+                    <img src="../img/Icons/SocialNetworks/discord.svg" alt="Discord logo" id="discord"
+                    sizes="(max-width: 480px) 40vw, 
+                    (max-width: 768px) 50vw, 
+                    (max-width: 1200px) 33vw, 
+                    (max-width: 1920px) 25vw, 
+                    20vw">
+                </picture>
+            </a>
+            <a href="https://www.roblox.com/communities/3248486/TR-PHANTOM#!/about" target="_blank" rel="noopener">
+                <picture>
+                    <img src="../img/Icons/SocialNetworks/roblox.svg" alt="Roblox logo" id="roblox"
+                    sizes="(max-width: 480px) 40vw, 
+                    (max-width: 768px) 50vw, 
+                    (max-width: 1200px) 33vw, 
+                    (max-width: 1920px) 25vw, 
+                    20vw">
+                </picture>
+            </a>
+            <a href="https://guilded.gg/Robine" target="_blank" rel="noopener">
+                <picture>
+                    <img src="../img/Icons/SocialNetworks/guilded.svg" alt="Guilded logo" id="guilded"
+                    sizes="(max-width: 480px) 40vw, 
+                    (max-width: 768px) 50vw, 
+                    (max-width: 1200px) 33vw, 
+                    (max-width: 1920px) 25vw, 
+                    20vw">
+                </picture>
+            </a>
+        </section>
+    </footer>
+</body>
+</html>

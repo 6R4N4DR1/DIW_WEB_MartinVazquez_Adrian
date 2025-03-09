@@ -1,0 +1,130 @@
+@use '../global/variables' as var; // Importing variables with alias 'var'
+@use '../base/fonts'; // Importing font styles
+@use '../global/functions'; // Importing global functions
+@import '../global/mixins'; // Importing mixins for reuse
+
+.aboutus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    flex-direction: column;
+    width: 50%;
+    .ourstory {
+        text-align: left;
+        padding-top: 5%;
+        h1 {
+            font-size: 1.5rem;
+            font-family: var.$font-title;
+            color: var.$primary;
+        }
+        p {
+            font-family: var.$font-base;
+            font-weight: 500;
+        }
+    }
+    .trailer {
+        text-align: left;
+        padding-top: 5%;
+        width: 100%;
+        h1 {
+            font-size: 1.5rem;
+            font-family: var.$font-title;
+            color: var.$primary;
+            padding-bottom: 10px;
+
+            &:last-child{
+                padding-top: 50px;
+                padding-bottom: 0;
+            }
+        }
+        iframe {
+            width: 100%; // Make video larger
+            height: 470px; // Set height for the video
+        }
+    }
+    .owners{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px; // Espacio entre las imágenes
+        section {
+            flex: 1 1 200px; // Ajusta el tamaño mínimo de las imágenes
+            max-width: 200px; // Tamaño máximo de las imágenes
+            text-align: center;
+            picture {
+                display: block;
+                width: 100%;
+                padding-bottom: 100%; // Mantiene la proporción cuadrada
+                position: relative;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%; // Hace las imágenes redondas
+                }
+            }
+            h2 {
+                padding-top: 10px;
+                font-size: 1.2rem;
+                font-family: var.$font-base;
+            }
+        }
+    }
+    .map{
+        text-align: left;
+        padding-top: 10%;
+        width: 100%;
+        h1 {
+            font-size: 1.5rem;
+            padding-bottom: 5px;
+            font-family: var.$font-title;
+            color: var.$primary;
+        }
+        p {
+            font-family: var.$font-base;
+            font-weight: 500;
+        }
+    }
+    .discord{
+        text-align: left;
+        padding-top: 10%;
+        width: 100%;
+        h1 {
+            font-size: 1.5rem;
+            padding-bottom: 5px;
+            font-family: var.$font-title;
+            color: var.$primary;
+        }
+        p {
+            font-family: var.$font-base;
+            font-weight: 500;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutus {
+        .trailer {
+            iframe {
+                width: 100%; // Make video larger
+                height: 215px; // Set height for the video
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutus {
+        .trailer {
+            iframe {
+                margin-left: -25%;
+                width: 150%; // Make video larger
+                height: 175px; // Set height for the video
+            }
+        }
+    }
+}

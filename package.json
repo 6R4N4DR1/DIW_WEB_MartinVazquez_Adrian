@@ -1,0 +1,32 @@
+{
+  "name": "diw_web_martinvazquez_adrian",
+  "version": "1.0.0",
+  "description": "My Web Project (PHANTOM Central Hub) for DIW course, from Adrian Martin Vazquez",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/6R4N4DR1/DIW_WEB_MartinVazquez_Adrian.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/6R4N4DR1/DIW_WEB_MartinVazquez_Adrian/issues"
+  },
+  "homepage": "https://github.com/6R4N4DR1/DIW_WEB_MartinVazquez_Adrian#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^6.0.1",
+    "vite": "^6.2.1",
+    "vite-plugin-html": "^3.2.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2"
+  }
+}

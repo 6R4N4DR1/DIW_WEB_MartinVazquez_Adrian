@@ -1,0 +1,143 @@
+@use '../global/variables' as var; // Importing variables with alias 'var'
+@use '../base/fonts'; // Importing font styles
+@use '../global/functions'; // Importing global functions
+@import '../global/mixins'; // Importing mixins for reuse
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-container {
+    background-color: var.$neutral-one;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px auto;
+    text-align: center;
+    position: relative; // Added for positioning the back link
+}
+
+#back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: var.$contrast;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        color: var.$secondary-dark;
+    }
+}
+
+.form-phantom {
+    padding-top: 50px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    picture {
+        img {
+            width: 100px;
+            height: 100px;
+        }
+        padding-right: 10px;
+    }
+
+    #textForm {
+        text-align: center;
+
+        .form-title {
+            @include header-title-styles(1.75rem);
+            color: var.$contrast;
+        }
+
+        #formtext-separator {
+            width: 100%;
+            padding: 10px auto;
+            border: 1px solid var.$contrast;
+        }
+
+        .form-subtitle {
+            @include header-title-styles(1.25rem);
+            color: var.$contrast;
+        }
+    }
+}
+
+.terms {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 55px;
+    width: 90%;
+
+    h2 {
+        @include header-title-styles(1.5rem);
+        color: var.$contrast;
+    }
+
+    p {
+        @include text-styles(var.$font-base, 1rem, var.$contrast);
+    }
+}
+
+.log-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+
+    label {
+        @include text-styles(var.$font-base, 1rem, var.$contrast);
+        padding-top: 20px;
+        padding-bottom: 5px;
+    }
+
+    input {
+        width: 80%;
+        padding: 10px;
+        padding-bottom: 15px;
+        border: 1px solid var.$neutral-one;
+        border-radius: 5px;
+        @include text-styles(var.$font-title, 1rem, var.$contrast);
+    }
+
+    button {
+        @include button-styles(var.$secondary-dark, var.$contrast);
+        font-family: var.$font-title;
+        margin-top: 15px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+}
+
+.logSocial {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+
+    picture {
+        cursor: pointer;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}

@@ -1,0 +1,278 @@
+@use '../global/variables' as var; // Importing variables with alias 'var'
+@use '../base/fonts'; // Importing font styles
+@use '../global/functions'; // Importing global functions
+@import '../global/mixins'; // Importing mixins for reuse
+
+.announcements {
+    margin-top: 45px; // Margin at the top
+    margin-bottom: 20px; // Margin at the bottom
+
+    .announcement-content {
+        display: flex; // Use flexbox layout
+        justify-content: center; // Center content horizontally
+        align-items: center; // Center content vertically
+        flex-direction: row; // Arrange children in a row direction
+        text-align: left; // Align text to the left
+        margin-bottom: 20px; // Margin at the bottom
+
+        .text-content {
+            flex: 1; // Flex-grow to take available space
+            @include text-styles(var.$font-base, 1.2rem, var.$contrast); // Mixin for text styles
+            margin-left: 225px; // Margin on the left
+
+            #versionannouncement {
+                padding-top: 20px; // Padding at the top
+                padding-bottom: 20px; // Padding at the bottom
+                font-size: functions.px-to-rem(23px); // Convert pixel value to rem
+                //font-size: 1.5rem;
+                font-family: var.$font-title; // Font family
+                color: var.$secondary-dark; // Text color
+            }
+        }
+
+        .image-content {
+            margin-left: 25px; // Margin on the left
+            margin-right: 200px; // Margin on the right
+            flex: 1; // Flex-grow to take available space
+            display: flex; // Use flexbox layout
+
+            img {
+                width: 100%; // Maximum width
+                height: auto; // Auto height
+            }
+        }
+    }
+
+    .advertisement {
+        @include flex-container(center, center, column); // Mixin for flex container
+        background-color: var.$contrast; // Background color
+        color: var.$neutral-two; // Text color
+        padding: 20px; // Padding
+        text-align: center; // Center text
+        margin-top: 20px; // Margin at the top
+        width: fit-content; // Fit content width
+        margin-left: auto; // Center horizontally
+        margin-right: auto; // Center horizontally
+        border-radius: 15px; // Rounded corners
+        font-family: var.$font-title; // Font family
+        font-size: 5rem; // Font size
+
+        p {
+            display: flex; // Use flexbox layout
+            align-items: center; // Center items vertically
+            color: var.$secondary-dark; // Text color
+        }
+
+        .discordlink {
+            color: var.$secondary-dark; // Text color
+            transition: color 0.3s ease, transform 0.3s ease; // Smooth transitions
+            background-color: var.$secondary-dark; // Background color
+            padding: 5px 10px; // Padding
+            text-decoration: none; // Remove text decoration
+            border-radius: 20px; // Rounded corners
+            padding: 20px; // Padding
+            font-size: 5rem; // Font size
+
+            &:hover {
+                color: var.$contrast; // Change color on hover
+                transition: color 0.3s ease, transform 0.3s ease; // Smooth transitions
+            }
+        }
+    }
+
+    .announcement-separator {
+        width: 100%; // Full width
+        height: 2px; // Height of the separator
+        background-color: #{var.$secondary-dark}; // Background color with interpolation
+        border: none; // No border
+        margin: 20px 0; // Margin
+    }
+}
+
+.HeroImageTitle {
+    position: relative; // Relative positioning
+    width: 100%; // Full width
+    height: auto; // Auto height
+
+    picture#heroimage {
+        width: 100%; // Full width
+
+        &::after {
+            content: ''; // Empty content
+            display: block; // Block display
+            width: 100%; // Full width
+            height: 5px; // Height of the separator
+            background-color: var.$secondary-dark; // Background color
+            position: absolute; // Absolute positioning
+            bottom: -2px; // Position from the bottom
+            top: 96%; // Position from the top
+            left: 0; // Position from the left
+        }
+
+        img {
+            width: 100%; // Full width
+            height: auto; // Auto height
+        }
+    }
+
+    .pageTitle {
+        position: absolute; // Absolute positioning
+        top: 50%; // Position from the top
+        left: 50%; // Position from the left
+        transform: translate(-50%, -50%); // Center horizontally and vertically
+        @include flex-container(center, center, row); // Mixin for flex container
+
+        h1 {
+            @include header-title-styles(5rem); // Mixin for header title styles
+            font-family: var.$font-title; // Font family
+            margin: 0 20px; // Margin
+            color: var.$secondary-dark; // Text color
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .announcements {
+        margin-top: 60px; // Margin at the top
+
+        .announcement-content {
+            .text-content {
+                margin-left: 40px; // Margin on the left
+                @include text-styles(var.$font-base, 1rem, var.$contrast); // Mixin for text styles
+            }
+
+            .image-content {
+                margin-right: 40px; // Margin on the right
+            }
+        }
+
+        .advertisement {
+            font-size: 3rem; // Font size
+
+            .discordlink {
+                font-size: 3rem; // Font size
+            }
+        }
+    }
+
+    .HeroImageTitle {
+        picture#heroimage {
+            &::after {
+                top: 93%; // Position from the top
+            }
+
+            img {
+                height: 100px; // Height
+            }
+        }
+
+        .pageTitle {
+            margin-top: 5px; // Margin at the top
+
+            h1 {
+                @include header-title-styles(3rem); // Mixin for header title styles
+                color: var.$secondary-dark; // Text color
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .announcements {
+        margin-top: 20px; // Margin at the top
+
+        .announcement-content {
+            flex-direction: column; // Arrange children in a column direction
+
+            .text-content {
+                margin-left: 40px; // Margin on the left
+                margin-right: 40px; // Margin on the right
+                @include text-styles(var.$font-base, 1rem, var.$contrast); // Mixin for text styles
+            }
+
+            .image-content {
+                width: 75%; // Full width
+                padding-top: 20px; // Padding at the top
+            }
+        }
+
+        .advertisement {
+            font-size: 1.7rem; // Font size
+
+            .discordlink {
+                font-size: 1.5rem; // Font size
+            }
+        }
+    }
+
+    .HeroImageTitle {
+        margin-top: -20px; // Margin at the top
+
+        picture#heroimage {
+            &::after {
+                top: 93%; // Position from the top
+            }
+
+            img {
+                height: 100px; // Height
+            }
+        }
+
+        .pageTitle {
+            h1 {
+                @include header-title-styles(2.2rem); // Mixin for header title styles
+                color: var.$secondary-dark; // Text color
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .announcements {
+        margin-top: 20px; // Margin at the top
+
+        .announcement-content {
+            flex-direction: column; // Arrange children in a column direction
+
+            .text-content {
+                margin-left: 40px; // Margin on the left
+                margin-right: 40px; // Margin on the right
+                @include text-styles(var.$font-base, 1rem, var.$contrast); // Mixin for text styles
+            }
+
+            .image-content {
+                width: 75%; // Full width
+                padding-top: 20px; // Padding at the top
+            }
+        }
+
+        .advertisement {
+            font-size: 1.5rem; // Font size
+
+            .discordlink {
+                font-size: 1.2rem; // Font size
+            }
+        }
+    }
+
+    .HeroImageTitle {
+        margin-top: -20px; // Margin at the top
+
+        picture#heroimage {
+            &::after {
+                top: 93%; // Position from the top;
+            }
+
+            img {
+                height: 100px; // Height
+            }
+        }
+
+        .pageTitle {
+            h1 {
+                @include header-title-styles(2rem); // Mixin for header title styles
+                color: var.$secondary-dark; // Text color
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+// Map of text sizes
+$font-sizes: (
+    small: 0.8em, // Small text size
+    medium: 1em, // Medium text size (default)
+    large: 1.5em, // Large text size
+    xlarge: 2em // Extra large text size
+);
+
+// Mixin to apply text sizes
+@mixin font-size($size) {
+    font-size: map-get($font-sizes, $size); // Retrieve and apply the font size from the map
+}
+
+// Examples of using the mixin
+.header-title {
+    @include font-size(large); // Applying large font size to header title
+}
+
+.header-subtitle {
+    @include font-size(medium); // Applying medium font size to header subtitle
+}

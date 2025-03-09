@@ -1,0 +1,25 @@
+//! CALL TO MODULES
+
+// Base styles
+@use 'base/fonts'; // Importing font styles
+@use 'base/all'; // Importing general styles
+
+// Component styles
+@use 'components/aside'; // Importing styles for aside component
+@use 'components/main'; // Importing styles for main component
+@use 'components/footer'; // Importing styles for footer component
+@use 'components/header'; // Importing styles for header component
+
+// Global styles
+@use 'global/variables'; // Importing global variables
+@use 'global/mixins'; // Importing global mixins
+@use 'global/functions'; // Importing global functions
+
+// Page-specific styles
+@use 'pages/home'; // Importing styles for home page
+@use 'pages/tutorials'; // Importing styles for active page
+@use 'pages/aboutus'; // Importing styles for scheduled page
+@use 'pages/register'; // Importing styles for register page
+@use 'pages/login'; // Importing styles for login page
+
+@import '../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css'; // Importing Font Awesome icons
