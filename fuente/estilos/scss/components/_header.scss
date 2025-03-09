@@ -319,6 +319,15 @@ header {
             p{
                 font-size: 1.2em; // Adjust font size
             }
+            #username {
+                h1 {
+                    font-size: 1.2em; // Adjust font size
+                }
+                #pfp{
+                    width: 40px; // Adjust image size
+                    height: 40px; // Adjust image size
+                }
+            }
         }
     }
 }
