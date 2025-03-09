@@ -166,11 +166,8 @@ footer {
   width: 100%;
 }
 footer #certification-container {
-  display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  gap: 0;
   background-color: #6A0DAD;
   padding: 4px;
   border-top-right-radius: 20px;
@@ -224,6 +221,7 @@ footer #social-container img:hover {
     height: auto;
   }
   footer #certification-container {
+    display: flex;
     width: 100%;
     padding: 4px;
     margin-bottom: 20px;
@@ -361,8 +359,6 @@ header .header-upper .header-title {
   margin: 0;
 }
 header .header-upper #navbar {
-  display: flex;
-  justify-content: flex-end;
   margin-right: 30px;
   padding-bottom: -20px;
 }

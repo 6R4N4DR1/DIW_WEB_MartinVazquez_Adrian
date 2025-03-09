@@ -17,7 +17,8 @@ footer {
 
     #certification-container {
         // Applying flex container mixin with center alignment
-        @include flex-container(center, center);
+        justify-content: center; // Align items to the end
+        align-items: center; // Center items vertically
         background-color: var.$extra; // Background color
         padding: 4px; // Padding
         border-top-right-radius: 20px; // Rounded top-right corner
@@ -76,6 +77,7 @@ footer {
         height: auto; // Auto height
 
         #certification-container {
+            display: flex; // Flexbox layout
             width: 100%; // Full width
             padding: 4px; // Padding
             margin-bottom: 20px; // Margin at the bottom
