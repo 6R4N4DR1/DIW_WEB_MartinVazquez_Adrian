@@ -6,7 +6,6 @@
 main {
     display: flex; // Use flexbox layout
     flex-direction: column; // Arrange children in a column direction
-    margin-top: 60px; // Margin at the top
     flex: 1; // Take up remaining space
     align-items: center; // Center items horizontally
     text-align: center; // Center text
@@ -14,7 +13,7 @@ main {
     z-index: 1; // Ensure it is above other elements
 
     .welcome-title {
-        margin-top: 80px; // Margin at the top
+        margin-top: 60px; // Margin at the top
         position: relative; // Relative positioning
         // Applying text styles mixin with specific font, size, and color
         @include text-styles(var.$font-base, 3rem, var.$neutral-two);
@@ -99,7 +98,6 @@ main {
 
 @media (max-width: 480px) {
     main {
-        margin-top: 80px; // Margin at the top
         margin-bottom: 30px; // Margin at the bottom
         #welcome-separator {
             width: 100%; // Full width

@@ -7,6 +7,7 @@
     
     <!-- Link to external CSS stylesheet -->
     <link rel="stylesheet" href="../estilos/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
     <!-- Favicon for the website -->
     <link rel="icon" type="image/x-icon" href="../img/Icons/Favicon/favicon.ico">
@@ -30,180 +31,175 @@
 </head>
 <body>
     <header id="header">
-        <!-- Logo and text in the header -->
-        <a href="../index.html" id="logo-container">
-            <picture>
-                <!-- Responsive images for different screen sizes -->
-                <source type="image/webp" srcset="../img/Header-Footer/LOGOS/WEBP/768px~1200px/LOGO1024px.webp 1024w, ../img/Header-Footer/LOGOS/PNG/480px~768px/LOGO512px.png 512w"
-                sizes="(max-width: 480px) 40vw, 
-                (max-width: 768px) 50vw, 
-                (max-width: 1200px) 33vw, 
-                (max-width: 1920px) 25vw, 
-                20vw">
-                <source type="image/avif" srcset="../img/Header-Footer/LOGOS/AVIF/768px~1200px/LOGO1024px.avif 1024w, ../img/Header-Footer/LOGOS/PNG/480px~768px/LOGO512px.png 512w"
-                sizes="(max-width: 480px) 40vw, 
-                (max-width: 768px) 50vw, 
-                (max-width: 1200px) 33vw, 
-                (max-width: 1920px) 25vw, 
-                20vw">
-                <img src="../img/Header-Footer/LOGOS/PNG/768px~1200px/LOGO1024px.png" alt="PHANTOM Central Hub logo" id="logo"
-                sizes="(max-width: 480px) 40vw, 
-                (max-width: 768px) 50vw, 
-                (max-width: 1200px) 33vw, 
-                (max-width: 1920px) 25vw, 
-                20vw">
-            </picture>
-            <section id="logo-text">
-                <h3 class="header-title">PHANTOM</h3>
-                <hr id="header-separator">
-                <h4 class="header-subtitle">CENTRAL HUB</h4>
-            </section>
-        </a>
-        
-        <!-- Navigation bar -->
-        <nav id="navbar">
-            <ul>
-                <li>
-                    <a href="home.html">
-                        <picture>
-                            <!-- Responsive images for different screen sizes -->
-                            <source type="image/webp" srcset="../img/Header-Footer/NAV/WEBP/768px~1200px/home1024px.webp 1024w, ../img/Header-Footer/NAV/WEBP/480px~768px/home512px.webp 512w"
-                            sizes="(max-width: 480px) 40vw, 
-                            (max-width: 768px) 50vw, 
-                            (max-width: 1200px) 33vw, 
-                            (max-width: 1920px) 25vw, 
-                            20vw">      
-                            <source type="image/avif" srcset="../img/Header-Footer/NAV/AVIF/768px~1200px/home1024px.avif 1024w, ../img/Header-Footer/NAV/AVIF/480px~768px/home512px.avif 512w"
-                            sizes="(max-width: 480px) 40vw, 
-                            (max-width: 768px) 50vw, 
-                            (max-width: 1200px) 33vw, 
-                            (max-width: 1920px) 25vw, 
-                            20vw">
-                            <img src="../img/Header-Footer/NAV/PNG/768px~1200px/home1024px.png" alt="Home icon" class="navlogos"
-                            sizes="(max-width: 480px) 40vw, 
-                            (max-width: 768px) 50vw, 
-                            (max-width: 1200px) 33vw, 
-                            (max-width: 1920px) 25vw, 
-                            20vw">
-                        </picture>
-                        <h3 class="header-title">HOME</h3>
-                    </a>
-                </li>
-                <li>
-                    <details>
-                        <summary>
+        <section class="header-upper">
+            <!-- Logo and text in the header -->
+            <a href="../index.html" id="logo-container">
+                <picture>
+                    <!-- Responsive images for different screen sizes -->
+                    <source type="image/webp" srcset="../img/Header-Footer/LOGOS/WEBP/768px~1200px/LOGO1024px.webp 1024w, ../img/Header-Footer/LOGOS/PNG/480px~768px/LOGO512px.png 512w"
+                    sizes="(max-width: 480px) 40vw, 
+                    (max-width: 768px) 50vw, 
+                    (max-width: 1200px) 33vw, 
+                    (max-width: 1920px) 25vw, 
+                    20vw">
+                    <source type="image/avif" srcset="../img/Header-Footer/LOGOS/AVIF/768px~1200px/LOGO1024px.avif 1024w, ../img/Header-Footer/LOGOS/PNG/480px~768px/LOGO512px.png 512w"
+                    sizes="(max-width: 480px) 40vw, 
+                    (max-width: 768px) 50vw, 
+                    (max-width: 1200px) 33vw, 
+                    (max-width: 1920px) 25vw, 
+                    20vw">
+                    <img src="../img/Header-Footer/LOGOS/PNG/768px~1200px/LOGO1024px.png" alt="PHANTOM Central Hub logo" id="logo"
+                    sizes="(max-width: 480px) 40vw, 
+                    (max-width: 768px) 50vw, 
+                    (max-width: 1200px) 33vw, 
+                    (max-width: 1920px) 25vw, 
+                    20vw">
+                </picture>
+                <section id="logo-text">
+                    <h3 class="header-title">PHANTOM</h3>
+                    <hr id="header-separator">
+                    <h4 class="header-subtitle">CENTRAL HUB</h4>
+                </section>
+            </a>
+            
+            <!-- Navigation bar -->
+            <nav id="navbar">
+                <ul>
+                    <li>
+                        <a href="home.html">
                             <picture>
                                 <!-- Responsive images for different screen sizes -->
-                                <source type="image/webp" srcset="../img/Header-Footer/NAV/WEBP/768px~1200px/group-discussion1024px.webp 1024w, ../img/Header-Footer/NAV/WEBP/480px~768px/group-discussion512px.webp 512w"
+                                <source type="image/webp" srcset="../img/Header-Footer/NAV/WEBP/768px~1200px/home1024px.webp 1024w, ../img/Header-Footer/NAV/WEBP/480px~768px/home512px.webp 512w"
+                                sizes="(max-width: 480px) 40vw, 
+                                (max-width: 768px) 50vw, 
+                                (max-width: 1200px) 33vw, 
+                                (max-width: 1920px) 25vw, 
+                                20vw">      
+                                <source type="image/avif" srcset="../img/Header-Footer/NAV/AVIF/768px~1200px/home1024px.avif 1024w, ../img/Header-Footer/NAV/AVIF/480px~768px/home512px.avif 512w"
                                 sizes="(max-width: 480px) 40vw, 
                                 (max-width: 768px) 50vw, 
                                 (max-width: 1200px) 33vw, 
                                 (max-width: 1920px) 25vw, 
                                 20vw">
-                                <source type="image/avif" srcset="../img/Header-Footer/NAV/AVIF/768px~1200px/group-discussion1024px.avif 1024w, ../img/Header-Footer/NAV/AVIF/480px~768px/group-discussion512px.avif 512w"
-                                sizes="(max-width: 480px) 40vw, 
-                                (max-width: 768px) 50vw, 
-                                (max-width: 1200px) 33vw, 
-                                (max-width: 1920px) 25vw, 
-                                20vw">
-                                <img src="../img/Header-Footer/NAV/PNG/768px~1200px/group-discussion1024px.png" alt="Events icon" class="navlogos"
+                                <img src="../img/Header-Footer/NAV/PNG/768px~1200px/home1024px.png" alt="Home icon" class="navlogos"
                                 sizes="(max-width: 480px) 40vw, 
                                 (max-width: 768px) 50vw, 
                                 (max-width: 1200px) 33vw, 
                                 (max-width: 1920px) 25vw, 
                                 20vw">
                             </picture>
-                            <h3 class="header-title">EVENTS</h3>
-                        </summary>
-                        <ul class="navdrop">
-                            <li>
-                                <a href="active.html">ACTIVE</a>
-                            </li>
-                            <li>
-                                <a href="scheduled.html">SCHEDULED</a>
-                            </li>
-                        </ul>
-                    </details>
-                </li>
-                <li>
-                    <details>
-                        <summary>
+                            <h3 class="header-title">HOME</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>
+                                <picture>
+                                    <!-- Responsive images for different screen sizes -->
+                                    <source type="image/webp" srcset="../img/Header-Footer/NAV/WEBP/768px~1200px/group-discussion1024px.webp 1024w, ../img/Header-Footer/NAV/WEBP/480px~768px/group-discussion512px.webp 512w"
+                                    sizes="(max-width: 480px) 40vw, 
+                                    (max-width: 768px) 50vw, 
+                                    (max-width: 1200px) 33vw, 
+                                    (max-width: 1920px) 25vw, 
+                                    20vw">
+                                    <source type="image/avif" srcset="../img/Header-Footer/NAV/AVIF/768px~1200px/group-discussion1024px.avif 1024w, ../img/Header-Footer/NAV/AVIF/480px~768px/group-discussion512px.avif 512w"
+                                    sizes="(max-width: 480px) 40vw, 
+                                    (max-width: 768px) 50vw, 
+                                    (max-width: 1200px) 33vw, 
+                                    (max-width: 1920px) 25vw, 
+                                    20vw">
+                                    <img src="../img/Header-Footer/NAV/PNG/768px~1200px/group-discussion1024px.png" alt="Events icon" class="navlogos"
+                                    sizes="(max-width: 480px) 40vw, 
+                                    (max-width: 768px) 50vw, 
+                                    (max-width: 1200px) 33vw, 
+                                    (max-width: 1920px) 25vw, 
+                                    20vw">
+                                </picture>
+                                <h3 class="header-title">EVENTS</h3>
+                            </summary>
+                            <ul class="navdrop">
+                                <li>
+                                    <a href="active.html">ACTIVE</a>
+                                </li>
+                                <li>
+                                    <a href="scheduled.html">SCHEDULED</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>
+                                <picture>
+                                    <!-- Responsive images for different screen sizes -->
+                                    <source type="image/webp" srcset="../img/Header-Footer/NAV/WEBP/768px~1200px/megaphone1024px.webp 1024w, ../img/Header-Footer/NAV/WEBP/480px~768px/megaphone512px.webp 512w"
+                                    sizes="(max-width: 480px) 40vw, 
+                                    (max-width: 768px) 50vw, 
+                                    (max-width: 1200px) 33vw, 
+                                    (max-width: 1920px) 25vw, 
+                                    20vw">
+                                    <source type="image/avif" srcset="../img/Header-Footer/NAV/AVIF/768px~1200px/megaphone1024px.avif 1024w, ../img/Header-Footer/NAV/AVIF/480px~768px/megaphone512px.avif 512w"
+                                    sizes="(max-width: 480px) 40vw, 
+                                    (max-width: 768px) 50vw, 
+                                    (max-width: 1200px) 33vw, 
+                                    (max-width: 1920px) 25vw, 
+                                    20vw">
+                                    <img src="../img/Header-Footer/NAV/PNG/768px~1200px/megaphone1024px.png" alt="Community icon" class="navlogos"
+                                    sizes="(max-width: 480px) 40vw, 
+                                    (max-width: 768px) 50vw, 
+                                    (max-width: 1200px) 33vw, 
+                                    (max-width: 1920px) 25vw, 
+                                    20vw">
+                                </picture>
+                                <h3 class="header-title">COMMUNITY</h3>
+                            </summary>
+                            <ul class="navdrop">
+                                <li>
+                                    <a href="polls.html">POLLS</a>
+                                </li>
+                                <li>
+                                    <a href="tutorials.html">TUTORIALS</a>
+                                </li>
+                                <li>
+                                    <a href="developers.html">DEVELOPERS</a>
+                                </li>
+                                <li>
+                                    <a href="users.html">USERS</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <a href="activitysweeps.html">
                             <picture>
                                 <!-- Responsive images for different screen sizes -->
-                                <source type="image/webp" srcset="../img/Header-Footer/NAV/WEBP/768px~1200px/megaphone1024px.webp 1024w, ../img/Header-Footer/NAV/WEBP/480px~768px/megaphone512px.webp 512w"
+                                <source type="image/webp" srcset="../img/Header-Footer/NAV/WEBP/768px~1200px/trophy1024px.webp 1024w, ../img/Header-Footer/NAV/WEBP/480px~768px/trophy512px.webp 512w"
                                 sizes="(max-width: 480px) 40vw, 
                                 (max-width: 768px) 50vw, 
                                 (max-width: 1200px) 33vw, 
                                 (max-width: 1920px) 25vw, 
                                 20vw">
-                                <source type="image/avif" srcset="../img/Header-Footer/NAV/AVIF/768px~1200px/megaphone1024px.avif 1024w, ../img/Header-Footer/NAV/AVIF/480px~768px/megaphone512px.avif 512w"
+                                <source type="image/avif" srcset="../img/Header-Footer/NAV/AVIF/768px~1200px/trophy1024px.avif 1024w, ../img/Header-Footer/NAV/AVIF/480px~768px/trophy512px.avif 512w"
                                 sizes="(max-width: 480px) 40vw, 
                                 (max-width: 768px) 50vw, 
                                 (max-width: 1200px) 33vw, 
                                 (max-width: 1920px) 25vw, 
                                 20vw">
-                                <img src="../img/Header-Footer/NAV/PNG/768px~1200px/megaphone1024px.png" alt="Community icon" class="navlogos"
+                                <img src="../img/Header-Footer/NAV/PNG/768px~1200px/trophy1024px.png" alt="Activity Sweeps icon" class="navlogos"
                                 sizes="(max-width: 480px) 40vw, 
                                 (max-width: 768px) 50vw, 
                                 (max-width: 1200px) 33vw, 
                                 (max-width: 1920px) 25vw, 
                                 20vw">
                             </picture>
-                            <h3 class="header-title">COMMUNITY</h3>
-                        </summary>
-                        <ul class="navdrop">
-                            <li>
-                                <a href="polls.html">POLLS</a>
-                            </li>
-                            <li>
-                                <a href="tutorials.html">TUTORIALS</a>
-                            </li>
-                            <li>
-                                <a href="developers.html">DEVELOPERS</a>
-                            </li>
-                            <li>
-                                <a href="users.html">USERS</a>
-                            </li>
-                        </ul>
-                    </details>
-                </li>
-                <li>
-                    <a href="activitysweeps.html">
-                        <picture>
-                            <!-- Responsive images for different screen sizes -->
-                            <source type="image/webp" srcset="../img/Header-Footer/NAV/WEBP/768px~1200px/trophy1024px.webp 1024w, ../img/Header-Footer/NAV/WEBP/480px~768px/trophy512px.webp 512w"
-                            sizes="(max-width: 480px) 40vw, 
-                            (max-width: 768px) 50vw, 
-                            (max-width: 1200px) 33vw, 
-                            (max-width: 1920px) 25vw, 
-                            20vw">
-                            <source type="image/avif" srcset="../img/Header-Footer/NAV/AVIF/768px~1200px/trophy1024px.avif 1024w, ../img/Header-Footer/NAV/AVIF/480px~768px/trophy512px.avif 512w"
-                            sizes="(max-width: 480px) 40vw, 
-                            (max-width: 768px) 50vw, 
-                            (max-width: 1200px) 33vw, 
-                            (max-width: 1920px) 25vw, 
-                            20vw">
-                            <img src="../img/Header-Footer/NAV/PNG/768px~1200px/trophy1024px.png" alt="Activity Sweeps icon" class="navlogos"
-                            sizes="(max-width: 480px) 40vw, 
-                            (max-width: 768px) 50vw, 
-                            (max-width: 1200px) 33vw, 
-                            (max-width: 1920px) 25vw, 
-                            20vw">
-                        </picture>
-                        <h3 class="header-title">A.S.</h3>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    
-    <!-- Button to toggle the aside menu -->
-    <button id="toggle-aside">MENU</button>
-    
-    <!-- Sidebar with user profile and links -->
-    <aside id="sidebar-two">
-        <section id="aside-left">
-            <a href="users.html" id="aside-username">
+                            <h3 class="header-title">A.S.</h3>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class="header-down">
+            <a href="users.html" id="username">
                 <picture>
                     <!-- Responsive images for different screen sizes -->
                     <source type="image/webp" srcset="../img/Header-Footer/DROPDOWN/WEBP/768px~1200px/PFP1024px.webp 1024w, ../img/Header-Footer/DROPDOWN/WEBP/480px~768px/PFP512px.webp 512w"
@@ -218,31 +214,17 @@
                     (max-width: 1200px) 33vw, 
                     (max-width: 1920px) 25vw, 
                     20vw">
-                    <img src="../img/Header-Footer/DROPDOWN/PNG/768px~1200px/PFP1024px.png" alt="Profile picture on aside" id="pfpaside"
+                    <img src="../img/Header-Footer/DROPDOWN/PNG/768px~1200px/PFP1024px.png" alt="Profile picture on aside" id="pfp"
                     sizes="(max-width: 480px) 40vw, 
                     (max-width: 768px) 50vw, 
                     (max-width: 1200px) 33vw, 
                     (max-width: 1920px) 25vw, 
                     20vw">
                 </picture>
-                <h1 class="aside-username-text">Username</h1>
+                <h1 class="username-text">Username</h1>
             </a>
-            <hr id="vertical-separator">
         </section>
-        <section id="aside-content">
-            <ul>
-                <li>
-                    <a href="users.html">About Me</a>
-                </li>
-                <li>
-                    <a href="users.html">Edit My Profile</a>
-                </li>
-                <li>
-                    <a href="users.html" id="PRASlink">P.R.A.S.</a>
-                </li>
-            </ul>
-        </section>
-    </aside>
+    </header>
     
     <!-- Main content of the page -->
     <main id="main">

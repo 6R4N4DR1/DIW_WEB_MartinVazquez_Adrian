@@ -6,139 +6,190 @@
 
 header {
     // Applying flex container mixin with space-between and center alignment
-    @include flex-container(space-between, center);
-    height: 60px; // Header height
+    height: auto; // Header height
     background-color: #{var.$primary}; // Background color
     width: 100%; // Full width
-    position: fixed; // Fixed position
-    top: 0; // Position at the top
-    left: 0; // Position at the left
+    position: relative; // Fixed position
     z-index: 4; // Ensure it is above other elements
 
-    #logo-container {
-        // Applying flex container mixin with center alignment
-        @include flex-container(center, center);
-        text-decoration: none; // Remove text decoration
-        padding-left: 20px; // Padding on the left
-        margin-right: 40px; // Margin on the right
+    .header-upper {
+        @include flex-container(space-between, center);
+        margin-bottom: -20px;
+        #logo-container {
+            // Applying flex container mixin with center alignment
+            @include flex-container(center, center);
+            text-decoration: none; // Remove text decoration
+            padding-left: 20px; // Padding on the left
+            margin-right: 40px; // Margin on the right
 
-        #logo {
-            // Applying image styles mixin with specific dimensions
-            @include image-styles(70px, auto);
-        }
-
-        #logo-text {
-            color: var.$neutral-two; // Text color
-            font-family: var.$font-title; // Font family
-            font-size: 0.70em; // Font size
-            font-weight: bold; // Font weight
-            text-align: center; // Center text
-
-            .header-title {
-                // Applying header title styles mixin with specific font size
-                @include header-title-styles(1.5em);
+            #logo {
+                // Applying image styles mixin with specific dimensions
+                @include image-styles(100px, auto);
             }
 
-            .header-subtitle {
-                // Applying header subtitle styles mixin with specific font size
-                @include header-title-styles(1.2em);
-            }
-
-            #header-separator {
-                width: 100%; // Full width
-                height: 2px; // Height of the separator
-                background-color: var.$neutral-two; // Background color
-                border-color: var.$neutral-two; // Border color
+            #logo-text {
                 color: var.$neutral-two; // Text color
-                margin: 5px 0; // Margin
+                font-family: var.$font-title; // Font family
+                font-size: 1em; // Font size
+                font-weight: bold; // Font weight
+                text-align: center; // Center text
+
+                .header-title {
+                    // Applying header title styles mixin with specific font size
+                    @include header-title-styles(1.5em);
+                }
+
+                .header-subtitle {
+                    // Applying header subtitle styles mixin with specific font size
+                    @include header-title-styles(1.2em);
+                }
+
+                #header-separator {
+                    width: 100%; // Full width
+                    height: 2px; // Height of the separator
+                    background-color: var.$neutral-two; // Background color
+                    border-color: var.$neutral-two; // Border color
+                    color: var.$neutral-two; // Text color
+                    margin: 5px 0; // Margin
+                }
             }
         }
-    }
 
-    .header-title {
-        // Applying header title styles mixin with specific font size
-        @include header-title-styles(0.90em);
-    }
+        .header-title {
+            // Applying header title styles mixin with specific font size
+            @include header-title-styles(0.90em);
+        }
 
-    #navbar {
-        display: flex; // Flexbox layout
-        justify-content: flex-end; // Align items to the end
-        margin-right: 30px; // Margin on the right
-        ul {
-            // Applying flex container mixin with specific alignment and spacing
-            @include flex-container(flex-start, center, row, 30px);
-            list-style: none; // Remove list style
+        #navbar {
+            display: flex; // Flexbox layout
+            justify-content: flex-end; // Align items to the end
+            margin-right: 30px; // Margin on the right
+            padding-bottom: -20px;
+            ul {
+                // Applying flex container mixin with specific alignment and spacing
+                @include flex-container(flex-start, center, row, 30px);
+                list-style: none; // Remove list style
 
-            li {
-                align-items: center; // Center items vertically
-                position: relative; // Relative positioning
-
-                picture {
+                li {
                     align-items: center; // Center items vertically
-                    margin-right: 10px; // Margin on the right
+                    position: relative; // Relative positioning
 
-                    .navlogos {
-                        // Applying image styles mixin with specific dimensions
-                        @include image-styles(45px, 45px);
-                    }
-                }
+                    picture {
+                        align-items: center; // Center items vertically
+                        margin-right: 10px; // Margin on the right
 
-                a {
-                    // Applying navbar link styles mixin
-                    @include navbar-link-styles;
-                }
-
-                .header-title:hover {
-                    color: var.$neutral-one; // Change color on hover
-                }
-
-                details {
-                    summary {
-                        // Applying flex container mixin with center alignment
-                        @include flex-container(center, center);
-                        cursor: pointer; // Pointer cursor
-
-                        .header-title {
-                            margin-left: 10px; // Margin on the left
-
-                            &:hover {
-                                color: var.$neutral-one; // Change color on hover
-                            }
+                        .navlogos {
+                            // Applying image styles mixin with specific dimensions
+                            @include image-styles(45px, 45px);
                         }
                     }
 
-                    .navdrop {
-                        list-style: none; // Remove list style
-                        padding: 10px; // Padding
-                        background-color: var.$primary; // Background color
-                        border-radius: 5px; // Rounded corners
-                        position: absolute; // Absolute positioning
-                        top: 100%; // Position below the parent
-                        left: 0; // Align to the left
-                        width: 100%; // Full width
-                        display: none; // Initially hidden
-                        text-align: center; // Center text
+                    a {
+                        // Applying navbar link styles mixin
+                        @include navbar-link-styles;
+                    }
 
-                        li {
-                            margin: 5px 0; // Margin
+                    .header-title:hover {
+                        color: var.$neutral-one; // Change color on hover
+                    }
 
-                            a {
-                                color: var.$neutral-two; // Text color
-                                display: block; // Block display
-                                width: 100%; // Full width
-                                font-family: var.$font-title; // Font family
+                    details {
+                        summary {
+                            // Applying flex container mixin with center alignment
+                            @include flex-container(center, center);
+                            cursor: pointer; // Pointer cursor
+
+                            .header-title {
+                                margin-left: 10px; // Margin on the left
 
                                 &:hover {
                                     color: var.$neutral-one; // Change color on hover
                                 }
                             }
                         }
-                    }
 
-                    &[open] .navdrop {
-                        display: block; // Show dropdown when open
+                        .navdrop {
+                            list-style: none; // Remove list style
+                            padding: 10px; // Padding
+                            background-color: var.$primary; // Background color
+                            border-radius: 5px; // Rounded corners
+                            position: absolute; // Absolute positioning
+                            top: 100%; // Position below the parent
+                            left: 0; // Align to the left
+                            width: 100%; // Full width
+                            display: none; // Initially hidden
+                            text-align: center; // Center text
+
+                            li {
+                                margin: 5px 0; // Margin
+
+                                a {
+                                    color: var.$neutral-two; // Text color
+                                    display: block; // Block display
+                                    width: 100%; // Full width
+                                    font-family: var.$font-title; // Font family
+
+                                    &:hover {
+                                        color: var.$neutral-one; // Change color on hover
+                                    }
+                                }
+                            }
+                        }
+
+                        &[open] .navdrop {
+                            display: block; // Show dropdown when open
+                        }
                     }
                 }
+            }
+        }
+    }
+
+    .header-down {
+        padding-bottom: 10px; // Padding on the bottom
+        p {
+            color: var.$neutral-two; // Text color
+            padding-right: 20px; // Padding on the right
+            font-family: var.$font-title; // Font family
+            display: flex; // Flexbox layout
+            justify-content: flex-end; // Align items to the end
+            font-size: 1.5em; // Font size
+            a{
+                text-decoration: none; // Remove text decoration
+                text-align: center;
+                transition: background-color 0.3s ease; // Smooth transition for background color
+                color: var.$neutral-two; // Text color
+    
+                &:hover {
+                    color: var.$neutral-one; // Change color on hover
+                }
+            }
+        }
+
+        #username {
+            display: flex; // Flexbox layout
+            align-items: center; // Center items vertically
+            justify-content: flex-end; // Align items to the end
+            padding-right: 25px; // Padding on the right
+            font-family: var.$font-title; // Font family
+            text-decoration: none; // Remove text decoration
+
+            h1 {
+                padding-top: 10px;
+                font-size: 1.5em; // Font size
+                transition: color 0.3s ease; // Smooth transition for color
+                color: var.$neutral-two; // Text color
+
+                &:hover {
+                    color: var.$neutral-one; // Change color on hover
+                }
+            }
+
+            #pfp {
+                width: 50px; // Adjust image size
+                height: 50px; // Adjust image size
+                border-radius: 50%; // Make image circular
+                margin-right: 10px;
             }
         }
     }
@@ -146,39 +197,42 @@ header {
 
 @media (max-width: 768px) {
     header {
-        #logo-container {
-            margin-left: 0; // Remove margin on the left
-
-            #logo {
-                // Applying image styles mixin with specific dimensions
-                @include image-styles(60px, auto);
+        .header-upper{
+            #logo-container {
+                margin-left: 0; // Remove margin on the left
+    
+                #logo {
+                    // Applying image styles mixin with specific dimensions
+                    @include image-styles(80px, auto);
+                }
+    
+                #logo-text {
+                    font-size: 0.7em; // Adjust font size
+                }
             }
-
-            #logo-text {
-                font-size: 0.5em; // Adjust font size
-            }
-        }
-
-        #navbar {
-            margin-left: 0; // Remove margin on the left
-            ul {
-                // Applying flex container mixin with specific alignment and spacing
-                @include flex-container(flex-start, center, row, 20px);
-                li {
-                    picture {
-                        margin-right: 3px; // Adjust margin on the right
-
-                        .navlogos {
-                            // Applying image styles mixin with specific dimensions
-                            @include image-styles(35px, 35px);
+    
+            #navbar {
+                order: 1;
+                margin-left: 0; // Remove margin on the left
+                ul {
+                    // Applying flex container mixin with specific alignment and spacing
+                    @include flex-container(flex-start, center, row, 20px);
+                    li {
+                        picture {
+                            margin-right: 3px; // Adjust margin on the right
+    
+                            .navlogos {
+                                // Applying image styles mixin with specific dimensions
+                                @include image-styles(35px, 35px);
+                            }
                         }
-                    }
-
-                    details {
-                        .navdrop {
-                            li {
-                                a {
-                                    font-size: 0.8em; // Adjust font size
+    
+                        details {
+                            .navdrop {
+                                li {
+                                    a {
+                                        font-size: 0.8em; // Adjust font size
+                                    }
                                 }
                             }
                         }
@@ -191,70 +245,79 @@ header {
 
 @media (max-width: 640px) {
     header {
-        #logo-container {
-            #logo {
-                // Applying image styles mixin with specific dimensions
-                @include image-styles(60px, auto);
-            }
-
-            #logo-text {
-                font-size: 0em; // Hide text
-                color: var.$primary; // Change text color
-                margin-left: -20px; // Adjust margin on the left
-                z-index: -1; // Send to back
-
-                .header-title {
-                    // Applying header title styles mixin with specific font size
-                    @include header-title-styles(0em);
+        .header-upper{
+            #logo-container {
+                #logo {
+                    // Applying image styles mixin with specific dimensions
+                    @include image-styles(80px, auto);
                 }
-
-                .header-subtitle {
-                    // Applying header subtitle styles mixin with specific font size
-                    @include header-title-styles(0em);
-                }
-
-                #header-separator {
-                    width: 0px; // Hide separator
-                    height: 0px; // Hide separator
-                    background-color: var.$primary; // Change background color
-                    border-color: var.$primary; // Change border color
+    
+                #logo-text {
+                    font-size: 0em; // Hide text
                     color: var.$primary; // Change text color
-                    margin: 0; // Remove margin
+                    margin-left: -20px; // Adjust margin on the left
+                    z-index: -1; // Send to back
+    
+                    .header-title {
+                        // Applying header title styles mixin with specific font size
+                        @include header-title-styles(0em);
+                    }
+    
+                    .header-subtitle {
+                        // Applying header subtitle styles mixin with specific font size
+                        @include header-title-styles(0em);
+                    }
+    
+                    #header-separator {
+                        width: 0px; // Hide separator
+                        height: 0px; // Hide separator
+                        background-color: var.$primary; // Change background color
+                        border-color: var.$primary; // Change border color
+                        color: var.$primary; // Change text color
+                        margin: 0; // Remove margin
+                    }
                 }
             }
-        }
-
-        .header-title {
-            // Applying header title styles mixin with specific font size
-            @include header-title-styles(0em);
-        }
-
-        #navbar {
-            margin-right: 25%; // Adjust margin on the right
-            ul {
-                // Applying flex container mixin with specific alignment and spacing
-                @include flex-container(flex-start, center, row, 15px);
-                li {
-                    picture {
-                        margin-right: 3px; // Adjust margin on the right
-
-                        .navlogos {
-                            // Applying image styles mixin with specific dimensions
-                            @include image-styles(35px, 35px);
+    
+            .header-title {
+                // Applying header title styles mixin with specific font size
+                @include header-title-styles(0em);
+            }
+    
+            #navbar {
+                margin-right: 25%; // Adjust margin on the right
+                ul {
+                    // Applying flex container mixin with specific alignment and spacing
+                    @include flex-container(flex-start, center, row, 15px);
+                    li {
+                        picture {
+                            margin-right: 3px; // Adjust margin on the right
+    
+                            .navlogos {
+                                // Applying image styles mixin with specific dimensions
+                                @include image-styles(35px, 35px);
+                            }
                         }
-                    }
-
-                    details {
-                        .navdrop {
-                            padding-right: 60px; // Adjust padding on the right
-                            li {
-                                a {
-                                    font-size: 0.5em; // Adjust font size
+    
+                        details {
+                            .navdrop {
+                                padding-right: 60px; // Adjust padding on the right
+                                li {
+                                    a {
+                                        font-size: 0.5em; // Adjust font size
+                                    }
                                 }
                             }
                         }
                     }
                 }
+            }
+        }
+        .header-down {
+            margin-top: 5px;
+            margin-right: 25%; // Adjust margin on the right
+            p{
+                font-size: 1.2em; // Adjust font size
             }
         }
     }
@@ -262,66 +325,68 @@ header {
 
 @media (max-width: 480px) {
     header {
-        #logo-container {
+        .header-upper {
+            #logo-container {
 
-            #logo {
-                // Applying image styles mixin with specific dimensions
-                @include image-styles(60px, auto);
-            }
-
-            #logo-text {
-                font-size: 0em; // Hide text
-                color: var.$primary; // Change text color
-                margin-left: -20px; // Adjust margin on the left
-                z-index: -1; // Send to back
-
-                .header-title {
-                    // Applying header title styles mixin with specific font size
-                    @include header-title-styles(0em);
+                #logo {
+                    // Applying image styles mixin with specific dimensions
+                    @include image-styles(80px, auto);
                 }
-
-                .header-subtitle {
-                    // Applying header subtitle styles mixin with specific font size
-                    @include header-title-styles(0em);
-                }
-
-                #header-separator {
-                    width: 0px; // Hide separator
-                    height: 0px; // Hide separator
-                    background-color: var.$primary; // Change background color
-                    border-color: var.$primary; // Change border color
+    
+                #logo-text {
+                    font-size: 0em; // Hide text
                     color: var.$primary; // Change text color
-                    margin: 0; // Remove margin
+                    margin-left: -20px; // Adjust margin on the left
+                    z-index: -1; // Send to back
+    
+                    .header-title {
+                        // Applying header title styles mixin with specific font size
+                        @include header-title-styles(0em);
+                    }
+    
+                    .header-subtitle {
+                        // Applying header subtitle styles mixin with specific font size
+                        @include header-title-styles(0em);
+                    }
+    
+                    #header-separator {
+                        width: 0px; // Hide separator
+                        height: 0px; // Hide separator
+                        background-color: var.$primary; // Change background color
+                        border-color: var.$primary; // Change border color
+                        color: var.$primary; // Change text color
+                        margin: 0; // Remove margin
+                    }
                 }
             }
-        }
-
-        .header-title {
-            // Applying header title styles mixin with specific font size
-            @include header-title-styles(0em);
-        }
-
-        #navbar {
-            margin-right: 20px; // Adjust margin on the right
-            ul {
-                // Applying flex container mixin with specific alignment and spacing
-                @include flex-container(flex-start, center, row, 15px);
-                li {
-                    picture {
-                        margin-right: 3px; // Adjust margin on the right
-
-                        .navlogos {
-                            // Applying image styles mixin with specific dimensions
-                            @include image-styles(35px, 35px);
+    
+            .header-title {
+                // Applying header title styles mixin with specific font size
+                @include header-title-styles(0em);
+            }
+    
+            #navbar {
+                margin-right: 20px; // Adjust margin on the right
+                ul {
+                    // Applying flex container mixin with specific alignment and spacing
+                    @include flex-container(flex-start, center, row, 15px);
+                    li {
+                        picture {
+                            margin-right: 3px; // Adjust margin on the right
+    
+                            .navlogos {
+                                // Applying image styles mixin with specific dimensions
+                                @include image-styles(35px, 35px);
+                            }
                         }
-                    }
-
-                    details {
-                        .navdrop {
-                            padding-right: 60px; // Adjust padding on the right
-                            li {
-                                a {
-                                    font-size: 0.5em; // Adjust font size
+    
+                        details {
+                            .navdrop {
+                                padding-right: 60px; // Adjust padding on the right
+                                li {
+                                    a {
+                                        font-size: 0.5em; // Adjust font size
+                                    }
                                 }
                             }
                         }
@@ -329,17 +394,22 @@ header {
                 }
             }
         }
+        .header-down {
+            margin-right: 17px;
+        }
     }
 }
 
 @media (max-width: 360px) {
     header {
-        #logo-container {
-            margin-left: -3px; // Adjust margin on the left
-        }
-
-        #navbar {
-            margin-left: -10px; // Adjust margin on the left
+        .header-upper {
+            #logo-container {
+                margin-left: -3px; // Adjust margin on the left
+            }
+    
+            #navbar {
+                margin-left: -10px; // Adjust margin on the left
+            }
         }
     }
 }

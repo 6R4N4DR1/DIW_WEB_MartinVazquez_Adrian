@@ -42,272 +42,9 @@ body {
   height: 100%;
 }
 
-#toggle-aside {
-  background-color: #000000;
-  color: #F7F7F7;
-  border: none;
-  cursor: pointer;
-  font-family: "Spectral", serif;
-  font-size: 0.8em;
-  transition: 0.3s;
-  position: fixed;
-  padding: 10px 200px;
-  top: 8.4%;
-  right: 20%;
-  transform: translateX(50%);
-  z-index: 3;
-}
-#toggle-aside:hover {
-  color: #EFB810;
-}
-
-#sidebar-one {
-  position: fixed;
-  top: -100%;
-  left: 66.59%;
-  width: 26.8%;
-  height: 20%;
-  background-color: #A87B05;
-  color: #F7F7F7;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  transition: top 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
-  z-index: 2;
-  flex-direction: column;
-  padding-top: 40px;
-}
-#sidebar-one p {
-  font-size: 2em;
-}
-#sidebar-one p a {
-  width: 80%;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  color: #F7F7F7;
-}
-#sidebar-one p a:hover {
-  color: #B8B8B8;
-}
-
-#sidebar-two {
-  position: fixed;
-  top: -100%;
-  left: 66.5%;
-  width: 27%;
-  height: 20%;
-  background-color: #A87B05;
-  color: #F7F7F7;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  transition: top 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
-  z-index: 2;
-  padding-top: 20px;
-  padding-bottom: 40px;
-  font-family: "Spectral", serif;
-}
-#sidebar-two #aside-left {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-}
-#sidebar-two #aside-username {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #F7F7F7;
-  transition: color 0.3s ease;
-}
-#sidebar-two #aside-username:hover {
-  color: #B8B8B8;
-}
-#sidebar-two #aside-username #pfpaside {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-#sidebar-two #aside-username .aside-username-text {
-  font-size: 2rem;
-  font-family: "Spectral", serif;
-  padding-top: 20px;
-}
-#sidebar-two #vertical-separator {
-  width: 2px;
-  height: 140px;
-  background-color: #F7F7F7;
-  color: #F7F7F7;
-  margin-left: 20px;
-}
-#sidebar-two #aside-content {
-  justify-content: center;
-  align-items: center;
-}
-#sidebar-two #aside-content ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  margin-right: 10px;
-}
-#sidebar-two #aside-content ul li {
-  font-family: "Spectral", serif;
-  padding-top: 2px;
-}
-#sidebar-two #aside-content ul li a {
-  text-decoration: none;
-  color: #F7F7F7;
-  transition: color 0.3s ease;
-  font-weight: 500;
-  font-size: 0.8em;
-}
-#sidebar-two #aside-content ul li a:hover {
-  color: #B8B8B8;
-}
-#sidebar-two #aside-content ul li #PRASlink {
-  font-size: 1.3em;
-  font-weight: bold;
-}
-
-#sidebar-one.active {
-  top: 60px;
-}
-
-#sidebar-two.active {
-  top: 60px;
-}
-
-#toggle-aside.active {
-  top: 170px;
-}
-
-@media (max-width: 768px) {
-  #toggle-aside {
-    top: 5.5%;
-    margin-right: 20.5px;
-    padding: 10px 127px;
-  }
-  #toggle-aside p {
-    font-size: 0.8em;
-  }
-  #toggle-aside p a {
-    width: 80%;
-    padding: 10px;
-  }
-  #sidebar-one {
-    padding-top: 30px;
-    width: 34.5%;
-    margin-left: -50px;
-    height: 10%;
-  }
-  #sidebar-one p {
-    font-size: 1.5em;
-  }
-  #sidebar-one p a {
-    width: 100%;
-  }
-  #sidebar-two {
-    padding-top: 10px;
-    width: 34.7%;
-    margin-left: -50px;
-    height: 10%;
-  }
-  #sidebar-two #aside-username #pfpaside {
-    width: 50px;
-    height: 50px;
-  }
-  #sidebar-two #aside-username .aside-username-text {
-    font-size: 1.2rem;
-    padding-bottom: 12px;
-  }
-  #sidebar-two #aside-content ul li a {
-    font-size: 0.6em;
-    padding-bottom: 20px;
-  }
-  #sidebar-two #aside-content ul li #PRASlink {
-    font-size: 1em;
-  }
-  #toggle-aside.active {
-    top: 135px;
-  }
-}
-@media (max-width: 480px) {
-  #toggle-aside {
-    top: 6.5%;
-    margin-right: 125px;
-    padding: 10px 127px;
-  }
-  #toggle-aside p {
-    font-size: 0.8em;
-  }
-  #toggle-aside p a {
-    width: 80%;
-    padding: 10px;
-  }
-  #sidebar-one {
-    padding-top: 30px;
-    width: 64.2%;
-    margin-left: -202.5px;
-    height: 12%;
-  }
-  #sidebar-one p {
-    font-size: 1.3em;
-  }
-  #sidebar-one p a {
-    width: 100%;
-  }
-  #sidebar-two {
-    padding-top: 10px;
-    width: 64.2%;
-    margin-left: -202px;
-    height: 11%;
-  }
-  #sidebar-two #aside-username #pfpaside {
-    width: 50px;
-    height: 50px;
-  }
-  #sidebar-two #aside-username .aside-username-text {
-    font-size: 1.2rem;
-    padding-bottom: 12px;
-  }
-  #sidebar-two #aside-content ul li a {
-    font-size: 0.6em;
-    padding-bottom: 20px;
-  }
-  #sidebar-two #aside-content ul li #PRASlink {
-    font-size: 1em;
-  }
-  #toggle-aside.active {
-    top: 135px;
-  }
-}
-@media (max-width: 360px) {
-  #sidebar-one {
-    padding-top: 25px;
-    width: 72.5%;
-    margin-left: -208.5px;
-    height: 12%;
-  }
-  #sidebar-one p {
-    font-size: 1.3em;
-  }
-  #sidebar-one p a {
-    width: 100%;
-  }
-  #sidebar-two {
-    padding-top: 30px;
-    width: 73%;
-    margin-left: -208.5px;
-    height: 11%;
-  }
-}
 main {
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
   flex: 1;
   align-items: center;
   text-align: center;
@@ -315,7 +52,7 @@ main {
   z-index: 1;
 }
 main .welcome-title {
-  margin-top: 80px;
+  margin-top: 60px;
   position: relative;
   font-family: "Spectral", serif;
   font-size: 3rem;
@@ -397,7 +134,6 @@ main #LandingPRASInfo p {
 
 @media (max-width: 480px) {
   main {
-    margin-top: 80px;
     margin-bottom: 30px;
   }
   main #welcome-separator {
@@ -560,20 +296,21 @@ footer #social-container img:hover {
   }
 }
 header {
+  height: auto;
+  background-color: #A87B05;
+  width: 100%;
+  position: relative;
+  z-index: 4;
+}
+header .header-upper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   gap: 0;
-  height: 60px;
-  background-color: #A87B05;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 4;
+  margin-bottom: -20px;
 }
-header #logo-container {
+header .header-upper #logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -583,32 +320,32 @@ header #logo-container {
   padding-left: 20px;
   margin-right: 40px;
 }
-header #logo-container #logo {
-  width: 70px;
+header .header-upper #logo-container #logo {
+  width: 100px;
   height: auto;
 }
-header #logo-container #logo-text {
+header .header-upper #logo-container #logo-text {
   color: #F7F7F7;
   font-family: "Aldrich", sans-serif;
-  font-size: 0.7em;
+  font-size: 1em;
   font-weight: bold;
   text-align: center;
 }
-header #logo-container #logo-text .header-title {
+header .header-upper #logo-container #logo-text .header-title {
   font-family: "Aldrich", sans-serif;
   font-size: 1.5em;
   color: #F7F7F7;
   text-transform: uppercase;
   margin: 0;
 }
-header #logo-container #logo-text .header-subtitle {
+header .header-upper #logo-container #logo-text .header-subtitle {
   font-family: "Aldrich", sans-serif;
   font-size: 1.2em;
   color: #F7F7F7;
   text-transform: uppercase;
   margin: 0;
 }
-header #logo-container #logo-text #header-separator {
+header .header-upper #logo-container #logo-text #header-separator {
   width: 100%;
   height: 2px;
   background-color: #F7F7F7;
@@ -616,19 +353,20 @@ header #logo-container #logo-text #header-separator {
   color: #F7F7F7;
   margin: 5px 0;
 }
-header .header-title {
+header .header-upper .header-title {
   font-family: "Aldrich", sans-serif;
   font-size: 0.9em;
   color: #F7F7F7;
   text-transform: uppercase;
   margin: 0;
 }
-header #navbar {
+header .header-upper #navbar {
   display: flex;
   justify-content: flex-end;
   margin-right: 30px;
+  padding-bottom: -20px;
 }
-header #navbar ul {
+header .header-upper #navbar ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -636,31 +374,31 @@ header #navbar ul {
   gap: 30px;
   list-style: none;
 }
-header #navbar ul li {
+header .header-upper #navbar ul li {
   align-items: center;
   position: relative;
 }
-header #navbar ul li picture {
+header .header-upper #navbar ul li picture {
   align-items: center;
   margin-right: 10px;
 }
-header #navbar ul li picture .navlogos {
+header .header-upper #navbar ul li picture .navlogos {
   width: 45px;
   height: 45px;
 }
-header #navbar ul li a {
+header .header-upper #navbar ul li a {
   text-decoration: none;
   display: flex;
   align-items: center;
   color: #F7F7F7;
 }
-header #navbar ul li a:hover {
+header .header-upper #navbar ul li a:hover {
   color: #B8B8B8;
 }
-header #navbar ul li .header-title:hover {
+header .header-upper #navbar ul li .header-title:hover {
   color: #B8B8B8;
 }
-header #navbar ul li details summary {
+header .header-upper #navbar ul li details summary {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -668,13 +406,13 @@ header #navbar ul li details summary {
   gap: 0;
   cursor: pointer;
 }
-header #navbar ul li details summary .header-title {
+header .header-upper #navbar ul li details summary .header-title {
   margin-left: 10px;
 }
-header #navbar ul li details summary .header-title:hover {
+header .header-upper #navbar ul li details summary .header-title:hover {
   color: #B8B8B8;
 }
-header #navbar ul li details .navdrop {
+header .header-upper #navbar ul li details .navdrop {
   list-style: none;
   padding: 10px;
   background-color: #A87B05;
@@ -686,80 +424,124 @@ header #navbar ul li details .navdrop {
   display: none;
   text-align: center;
 }
-header #navbar ul li details .navdrop li {
+header .header-upper #navbar ul li details .navdrop li {
   margin: 5px 0;
 }
-header #navbar ul li details .navdrop li a {
+header .header-upper #navbar ul li details .navdrop li a {
   color: #F7F7F7;
   display: block;
   width: 100%;
   font-family: "Aldrich", sans-serif;
 }
-header #navbar ul li details .navdrop li a:hover {
+header .header-upper #navbar ul li details .navdrop li a:hover {
   color: #B8B8B8;
 }
-header #navbar ul li details[open] .navdrop {
+header .header-upper #navbar ul li details[open] .navdrop {
   display: block;
+}
+header .header-down {
+  padding-bottom: 10px;
+}
+header .header-down p {
+  color: #F7F7F7;
+  padding-right: 20px;
+  font-family: "Aldrich", sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5em;
+}
+header .header-down p a {
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  color: #F7F7F7;
+}
+header .header-down p a:hover {
+  color: #B8B8B8;
+}
+header .header-down #username {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 25px;
+  font-family: "Aldrich", sans-serif;
+  text-decoration: none;
+}
+header .header-down #username h1 {
+  padding-top: 10px;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+  color: #F7F7F7;
+}
+header .header-down #username h1:hover {
+  color: #B8B8B8;
+}
+header .header-down #username #pfp {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 @media (max-width: 768px) {
-  header #logo-container {
+  header .header-upper #logo-container {
     margin-left: 0;
   }
-  header #logo-container #logo {
-    width: 60px;
+  header .header-upper #logo-container #logo {
+    width: 80px;
     height: auto;
   }
-  header #logo-container #logo-text {
-    font-size: 0.5em;
+  header .header-upper #logo-container #logo-text {
+    font-size: 0.7em;
   }
-  header #navbar {
+  header .header-upper #navbar {
+    order: 1;
     margin-left: 0;
   }
-  header #navbar ul {
+  header .header-upper #navbar ul {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     gap: 20px;
   }
-  header #navbar ul li picture {
+  header .header-upper #navbar ul li picture {
     margin-right: 3px;
   }
-  header #navbar ul li picture .navlogos {
+  header .header-upper #navbar ul li picture .navlogos {
     width: 35px;
     height: 35px;
   }
-  header #navbar ul li details .navdrop li a {
+  header .header-upper #navbar ul li details .navdrop li a {
     font-size: 0.8em;
   }
 }
 @media (max-width: 640px) {
-  header #logo-container #logo {
-    width: 60px;
+  header .header-upper #logo-container #logo {
+    width: 80px;
     height: auto;
   }
-  header #logo-container #logo-text {
+  header .header-upper #logo-container #logo-text {
     font-size: 0em;
     color: #A87B05;
     margin-left: -20px;
     z-index: -1;
   }
-  header #logo-container #logo-text .header-title {
+  header .header-upper #logo-container #logo-text .header-title {
     font-family: "Aldrich", sans-serif;
     font-size: 0em;
     color: #F7F7F7;
     text-transform: uppercase;
     margin: 0;
   }
-  header #logo-container #logo-text .header-subtitle {
+  header .header-upper #logo-container #logo-text .header-subtitle {
     font-family: "Aldrich", sans-serif;
     font-size: 0em;
     color: #F7F7F7;
     text-transform: uppercase;
     margin: 0;
   }
-  header #logo-container #logo-text #header-separator {
+  header .header-upper #logo-container #logo-text #header-separator {
     width: 0px;
     height: 0px;
     background-color: #A87B05;
@@ -767,63 +549,70 @@ header #navbar ul li details[open] .navdrop {
     color: #A87B05;
     margin: 0;
   }
-  header .header-title {
+  header .header-upper .header-title {
     font-family: "Aldrich", sans-serif;
     font-size: 0em;
     color: #F7F7F7;
     text-transform: uppercase;
     margin: 0;
   }
-  header #navbar {
+  header .header-upper #navbar {
     margin-right: 25%;
   }
-  header #navbar ul {
+  header .header-upper #navbar ul {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     gap: 15px;
   }
-  header #navbar ul li picture {
+  header .header-upper #navbar ul li picture {
     margin-right: 3px;
   }
-  header #navbar ul li picture .navlogos {
+  header .header-upper #navbar ul li picture .navlogos {
     width: 35px;
     height: 35px;
   }
-  header #navbar ul li details .navdrop {
+  header .header-upper #navbar ul li details .navdrop {
     padding-right: 60px;
   }
-  header #navbar ul li details .navdrop li a {
+  header .header-upper #navbar ul li details .navdrop li a {
     font-size: 0.5em;
+  }
+  header .header-down {
+    margin-top: 5px;
+    margin-right: 25%;
+  }
+  header .header-down p {
+    font-size: 1.2em;
   }
 }
 @media (max-width: 480px) {
-  header #logo-container #logo {
-    width: 60px;
+  header .header-upper #logo-container #logo {
+    width: 80px;
     height: auto;
   }
-  header #logo-container #logo-text {
+  header .header-upper #logo-container #logo-text {
     font-size: 0em;
     color: #A87B05;
     margin-left: -20px;
     z-index: -1;
   }
-  header #logo-container #logo-text .header-title {
+  header .header-upper #logo-container #logo-text .header-title {
     font-family: "Aldrich", sans-serif;
     font-size: 0em;
     color: #F7F7F7;
     text-transform: uppercase;
     margin: 0;
   }
-  header #logo-container #logo-text .header-subtitle {
+  header .header-upper #logo-container #logo-text .header-subtitle {
     font-family: "Aldrich", sans-serif;
     font-size: 0em;
     color: #F7F7F7;
     text-transform: uppercase;
     margin: 0;
   }
-  header #logo-container #logo-text #header-separator {
+  header .header-upper #logo-container #logo-text #header-separator {
     width: 0px;
     height: 0px;
     background-color: #A87B05;
@@ -831,42 +620,45 @@ header #navbar ul li details[open] .navdrop {
     color: #A87B05;
     margin: 0;
   }
-  header .header-title {
+  header .header-upper .header-title {
     font-family: "Aldrich", sans-serif;
     font-size: 0em;
     color: #F7F7F7;
     text-transform: uppercase;
     margin: 0;
   }
-  header #navbar {
+  header .header-upper #navbar {
     margin-right: 20px;
   }
-  header #navbar ul {
+  header .header-upper #navbar ul {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     gap: 15px;
   }
-  header #navbar ul li picture {
+  header .header-upper #navbar ul li picture {
     margin-right: 3px;
   }
-  header #navbar ul li picture .navlogos {
+  header .header-upper #navbar ul li picture .navlogos {
     width: 35px;
     height: 35px;
   }
-  header #navbar ul li details .navdrop {
+  header .header-upper #navbar ul li details .navdrop {
     padding-right: 60px;
   }
-  header #navbar ul li details .navdrop li a {
+  header .header-upper #navbar ul li details .navdrop li a {
     font-size: 0.5em;
+  }
+  header .header-down {
+    margin-right: 17px;
   }
 }
 @media (max-width: 360px) {
-  header #logo-container {
+  header .header-upper #logo-container {
     margin-left: -3px;
   }
-  header #navbar {
+  header .header-upper #navbar {
     margin-left: -10px;
   }
 }
